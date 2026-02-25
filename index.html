@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنا ترافیک | محصولات شهری و جاده‌ای</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration for Dark Mode & Colors -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'Tahoma', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316', // Orange accent for traffic vibe
+                            600: '#ea580c',
+                            900: '#7c2d12',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        .dark ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        body { font-family: 'Vazirmatn', sans-serif; }
+        
+        /* Smooth transitions */
+        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
+        
+        /* Modal styling */
+        .modal-active { overflow: hidden; }
+        .info-text { white-space: pre-line; line-height: 1.8; }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 dark:bg-dark-bg dark:text-slate-200 transition-all duration-300 flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white dark:bg-dark-card shadow-md transition-colors duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-road text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl lg:text-2xl text-slate-900 dark:text-white tracking-tight">برنا ترافیک</h1>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">تجهیزات شهری و جاده‌ای</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="#" class="text-brand-500 hover:text-brand-600 transition-colors">صفحه اصلی</a>
+                    <a href="#products-section" class="hover:text-brand-500 transition-colors">محصولات</a>
+                    <a href="#" class="hover:text-brand-500 transition-colors">پروژه ها</a>
+                    <a href="#" class="hover:text-brand-500 transition-colors">مطالب</a>
+                    <a href="#" class="hover:text-brand-500 transition-colors">درباره ما</a>
+                    <a href="#footer" class="hover:text-brand-500 transition-colors">تماس با ما</a>
+                </nav>
+
+                <!-- Actions (Dark Mode & Mobile Menu) -->
+                <div class="flex items-center gap-4">
+                    <button id="darkModeToggle" class="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="تغییر تم">
+                        <i class="fa-solid fa-moon text-slate-700 dark:text-slate-300 dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun text-yellow-400 hidden dark:inline-block text-lg"></i>
+                    </button>
+                    
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 dark:text-slate-300 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-dark-card border-t border-slate-100 dark:border-dark-border px-4 py-4 space-y-3 shadow-inner">
+            <a href="#" class="block px-4 py-2 text-brand-500 font-medium bg-brand-50 dark:bg-slate-800 rounded-lg">صفحه اصلی</a>
+            <a href="#products-section" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">محصولات</a>
+            <a href="#" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">پروژه ها</a>
+            <a href="#" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">مطالب</a>
+            <a href="#" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">درباره ما</a>
+            <a href="#footer" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">تماس با ما</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-slate-900 text-white overflow-hidden py-20 lg:py-28">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-500/20 text-brand-400 font-semibold mb-6 border border-brand-500/30">پیشرو در صنعت</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">کاتالوگ هوشمند <span class="text-brand-500">برنا ترافیک</span></h2>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">تولید کننده برتر انواع تجهیزات ترافیکی، شهری، موانع و تابلوهای راهنمایی و رانندگی با بالاترین استانداردهای کیفیت.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#products-section" class="px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-brand-500/30 transform hover:-translate-y-1">مشاهده محصولات</a>
+                <a href="#footer" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 hover:border-slate-600">تماس با کارشناسان</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content (Catalog) -->
+    <main id="products-section" class="flex-grow container mx-auto px-4 py-12">
+        
+        <!-- Filters & Search Bar -->
+        <div class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border p-5 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Search -->
+                <div class="lg:col-span-2 relative">
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                        <i class="fa-solid fa-search text-slate-400"></i>
+                    </div>
+                    <input type="text" id="searchInput" placeholder="جستجوی نام کالا..." class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl py-3 pr-10 pl-4 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all placeholder-slate-400">
+                </div>
+
+                <!-- Main Group Filter -->
+                <div>
+                    <select id="mainGroupFilter" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-brand-500 appearance-none">
+                        <option value="0">همه گروه‌های اصلی</option>
+                    </select>
+                </div>
+
+                <!-- Sub Group Filter -->
+                <div>
+                    <select id="subGroupFilter" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-brand-500 appearance-none disabled:opacity-50">
+                        <option value="0">همه گروه‌های فرعی</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Products Status / Loading -->
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-bold border-r-4 border-brand-500 pr-3">لیست محصولات</h3>
+            <span id="resultCount" class="bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 font-bold px-3 py-1 rounded-lg text-sm">در حال بارگذاری...</span>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+            <!-- Loading Skeletons -->
+            <div class="col-span-full flex justify-center py-20">
+                <i class="fa-solid fa-circle-notch fa-spin text-4xl text-brand-500"></i>
+            </div>
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div id="emptyState" class="hidden flex-col items-center justify-center py-20 text-slate-500 dark:text-slate-400">
+            <i class="fa-solid fa-box-open text-6xl mb-4 text-slate-300 dark:text-slate-600"></i>
+            <p class="text-lg font-medium">کالایی با این مشخصات یافت نشد!</p>
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="flex flex-wrap justify-center items-center gap-2 pb-10">
+            <!-- Pagination buttons will be generated here -->
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-4 border-brand-500 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- About -->
+                <div>
+                    <h4 class="text-white text-xl font-bold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-industry text-brand-500"></i> برنا ترافیک
+                    </h4>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-400">
+                        مجموعه صنعتی برنا ترافیک با سال‌ها تجربه در تولید محصولات شهری، جاده‌ای و الکترونیک، آماده خدمت‌رسانی و اجرای پروژه‌های بزرگ در سراسر کشور می‌باشد.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://api.whatsapp.com/send?phone=+989351180970" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                        <a href="https://t.me/bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0088cc] hover:text-white transition-colors"><i class="fa-brands fa-telegram text-lg"></i></a>
+                        <a href="https://www.instagram.com/bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#E1306C] hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://facebook.com/Bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Products Links -->
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">محصولات ما</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تابلوهای معرفی معابر، اماکن، تزئینی</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تجهیزات ترافیکی</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پل های عابر پیاده</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مبلمان شهری (نیمکت، سطل)</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> وسایل پارکی، بازی فلزی</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پایه چراغ ها و روشنایی</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مجموعه پلی اتیلن بازی کودکان</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پرچم و پایه پرچم</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">دسترسی سریع</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> صفحه اصلی</a></li>
+                        <li><a href="#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> محصولات</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پروژه ها</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مطالب</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> درباره ما</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">ارتباط با ما</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-500"></i>
+                            <div>
+                                <strong class="block text-white mb-1">دفتر مرکزی:</strong>
+                                <span>تهران - زعفرانیه - اردیبهشت مرکزی - پلاک 10</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-industry mt-1 text-brand-500"></i>
+                            <div>
+                                <strong class="block text-white mb-1">کارخانه و فروش:</strong>
+                                <span>مازندران بابل شهرک صنعتی منصور کنده قطعه K5,K4</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">021 26804717 <span class="mx-1">|</span> 011 32073651-3</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-mobile-screen text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">0911 118 0970</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-fax text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">011 32072298</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-500"></i>
+                            <a href="mailto:Info@Bornatraffic.com" class="hover:text-brand-400 transition-colors">Info@Bornatraffic.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>تمامی حقوق برای <strong class="text-slate-300">گروه صنعتی برنا ترافیک</strong> محفوظ است. © 2024</p>
+                <p>طراحی و توسعه کاتالوگ هوشمند توسط Borna AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal (Hidden by default) -->
+    <div id="productModal" class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        
+        <!-- Modal Content -->
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-white dark:bg-dark-card rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300" id="modalContainer">
+                
+                <!-- Modal Header -->
+                <div class="sticky top-0 bg-white/90 dark:bg-dark-card/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 p-4 px-6 flex justify-between items-center z-10">
+                    <h3 id="modalTitle" class="text-xl font-bold text-slate-900 dark:text-white pr-2 border-r-4 border-brand-500">نام کالا</h3>
+                    <button onclick="closeModal()" class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-red-100 hover:text-red-500 transition-colors">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Image -->
+                    <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-2 flex items-center justify-center border border-slate-100 dark:border-slate-700 h-64 md:h-auto">
+                        <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal rounded-lg" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=تصویر+موجود+نیست';">
+                    </div>
+                    
+                    <!-- Details -->
+                    <div class="flex flex-col">
+                        
+                        <!-- Badges -->
+                        <div class="flex gap-2 mb-4">
+                            <span id="modalGroup" class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs px-3 py-1 rounded-full font-medium">گروه</span>
+                            <span id="modalUnit" class="bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-xs px-3 py-1 rounded-full font-medium">واحد</span>
+                        </div>
+
+                        <!-- Price Box -->
+                        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-100 dark:border-slate-700 mb-6">
+                            <div class="text-sm text-slate-500 dark:text-slate-400 mb-1">قیمت نهایی:</div>
+                            <div class="flex items-end gap-2 text-brand-600 dark:text-brand-400">
+                                <span id="modalPrice" class="text-3xl font-black tracking-tight">0</span>
+                                <span class="text-sm font-bold mb-1">تومان</span>
+                            </div>
+                        </div>
+
+                        <!-- Information List -->
+                        <div class="flex-grow">
+                            <h4 class="font-bold text-slate-800 dark:text-white mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-clipboard-list text-brand-500"></i> مشخصات کالا
+                            </h4>
+                            <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-100 dark:border-slate-700">
+                                <p id="modalInfo" class="info-text text-sm text-slate-600 dark:text-slate-300"></p>
+                            </div>
+                        </div>
+
+                        <!-- Action Button -->
+                        <button onclick="closeModal()" class="mt-6 w-full py-3 bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-500 text-white font-bold rounded-xl transition-colors">
+                            بستن و بازگشت
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Logic -->
+    <script>
+        // State variables
+        let db = { MainGroups: [], SubGroups: [], Products: [] };
+        let filteredProducts = [];
+        let currentPage = 1;
+        const itemsPerPage = 18;
+
+        // Elements
+        const grid = document.getElementById('productGrid');
+        const emptyState = document.getElementById('emptyState');
+        const pagination = document.getElementById('pagination');
+        const resultCount = document.getElementById('resultCount');
+        const searchInput = document.getElementById('searchInput');
+        const mainFilter = document.getElementById('mainGroupFilter');
+        const subFilter = document.getElementById('subGroupFilter');
+        
+        // Modal Elements
+        const modal = document.getElementById('productModal');
+        const modalContainer = document.getElementById('modalContainer');
+
+        // Init App
+        async function init() {
+            setupDarkMode();
+            setupMobileMenu();
+            
+            try {
+                // Fetch JSON from the same directory (GitHub Pages structure)
+                const response = await fetch('catalog_data.json');
+                if(!response.ok) throw new Error("فایل دیتا یافت نشد");
+                db = await response.json();
+                
+                populateFilters();
+                applyFilters();
+                
+                // Event Listeners for filters
+                searchInput.addEventListener('input', () => { currentPage = 1; applyFilters(); });
+                mainFilter.addEventListener('change', () => { 
+                    updateSubFilter(); 
+                    currentPage = 1; 
+                    applyFilters(); 
+                });
+                subFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
+
+            } catch (error) {
+                console.error(error);
+                grid.innerHTML = `<div class="col-span-full text-center text-red-500 py-10">
+                    <i class="fa-solid fa-triangle-exclamation text-4xl mb-4"></i>
+                    <p class="font-bold">خطا در بارگذاری اطلاعات سایت.</p>
+                    <p class="text-sm mt-2">لطفاً مطمئن شوید فایل catalog_data.json آپلود شده است.</p>
+                </div>`;
+            }
+        }
+
+        // Setup Filters
+        function populateFilters() {
+            db.MainGroups.forEach(g => {
+                const opt = document.createElement('option');
+                opt.value = g.Id;
+                opt.textContent = g.Name;
+                mainFilter.appendChild(opt);
+            });
+        }
+
+        function updateSubFilter() {
+            const mainId = parseInt(mainFilter.value);
+            subFilter.innerHTML = '<option value="0">همه گروه‌های فرعی</option>';
+            
+            if(mainId === 0) {
+                subFilter.disabled = true;
+                return;
+            }
+
+            subFilter.disabled = false;
+            const subs = db.SubGroups.filter(s => s.ParentId === mainId);
+            subs.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s.Id;
+                opt.textContent = s.Name;
+                subFilter.appendChild(opt);
+            });
+        }
+
+        // Apply Filters
+        function applyFilters() {
+            const query = searchInput.value.trim().toLowerCase();
+            const mainId = parseInt(mainFilter.value);
+            const subId = parseInt(subFilter.value);
+
+            filteredProducts = db.Products.filter(p => {
+                const matchSearch = p.Name.toLowerCase().includes(query);
+                const matchMain = mainId === 0 || p.MainGroupId === mainId;
+                const matchSub = subId === 0 || p.SubGroupId === subId;
+                return matchSearch && matchMain && matchSub;
+            });
+
+            resultCount.innerHTML = `نمایش <span class="font-black">${filteredProducts.length}</span> کالا`;
+            renderGrid();
+        }
+
+        // Render Product Grid
+        function renderGrid() {
+            grid.innerHTML = '';
+            
+            if(filteredProducts.length === 0) {
+                emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
+                pagination.innerHTML = '';
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+                emptyState.classList.remove('flex');
+            }
+
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pageData = filteredProducts.slice(start, end);
+
+            pageData.forEach(prod => {
+                // Determine SubGroup Name for the badge
+                const subG = db.SubGroups.find(s => s.Id === prod.SubGroupId);
+                const badgeName = subG ? subG.Name : 'محصولات';
+
+                const card = document.createElement('div');
+                card.className = "bg-white dark:bg-dark-card rounded-2xl shadow-sm hover:shadow-xl border border-slate-100 dark:border-dark-border overflow-hidden transition-all duration-300 transform hover:-translate-y-1 flex flex-col cursor-pointer group";
+                card.onclick = () => openModal(prod.Id);
+                
+                card.innerHTML = `
+                    <div class="h-48 bg-white p-4 flex items-center justify-center relative border-b border-slate-50 dark:border-slate-800">
+                        <img src="images/${prod.ImageName}" alt="${prod.Name}" loading="lazy" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=بدون+تصویر';">
+                        <div class="absolute top-3 right-3 bg-white/90 backdrop-blur text-slate-700 text-xs font-bold px-2 py-1 rounded-md shadow-sm border border-slate-100">
+                            ${badgeName}
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h4 class="font-bold text-slate-800 dark:text-white text-base leading-snug mb-4 line-clamp-2" title="${prod.Name}">${prod.Name}</h4>
+                        
+                        <div class="mt-auto flex items-end justify-between">
+                            <div>
+                                <span class="block text-xs text-slate-400 dark:text-slate-500 mb-1">قیمت نهایی (${prod.Unit}):</span>
+                                <div class="text-brand-600 dark:text-brand-400 font-black text-lg flex items-center gap-1">
+                                    ${prod.FinalPrice !== "0" ? prod.FinalPrice : "تماس بگیرید"}
+                                    ${prod.FinalPrice !== "0" ? '<span class="text-xs font-medium">تومان</span>' : ''}
+                                </div>
+                            </div>
+                            <div class="w-8 h-8 rounded-lg bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-brand-500 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            renderPagination();
+        }
+
+        // Render Pagination
+        function renderPagination() {
+            pagination.innerHTML = '';
+            const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+            if(totalPages <= 1) return;
+
+            // Prev
+            const prev = document.createElement('button');
+            prev.className = `w-10 h-10 flex items-center justify-center rounded-xl font-bold transition-colors ${currentPage === 1 ? 'bg-slate-100 text-slate-400 cursor-not-allowed dark:bg-slate-800 dark:text-slate-600' : 'bg-white text-slate-700 hover:bg-brand-50 hover:text-brand-600 shadow-sm border border-slate-200 dark:bg-dark-card dark:text-slate-300 dark:border-dark-border dark:hover:bg-slate-700'}`;
+            prev.innerHTML = '<i class="fa-solid fa-angle-right"></i>';
+            prev.disabled = currentPage === 1;
+            prev.onclick = () => { currentPage--; renderGrid(); window.scrollTo({top: document.getElementById('products-section').offsetTop - 100, behavior: 'smooth'}); };
+            pagination.appendChild(prev);
+
+            // Pages (Simplified logic for 500 items)
+            let startP = Math.max(1, currentPage - 2);
+            let endP = Math.min(totalPages, currentPage + 2);
+
+            if(startP > 1) {
+                pagination.appendChild(createPageBtn(1));
+                if(startP > 2) pagination.appendChild(createDots());
+            }
+
+            for(let i=startP; i<=endP; i++) {
+                pagination.appendChild(createPageBtn(i));
+            }
+
+            if(endP < totalPages) {
+                if(endP < totalPages - 1) pagination.appendChild(createDots());
+                pagination.appendChild(createPageBtn(totalPages));
+            }
+
+            // Next
+            const next = document.createElement('button');
+            next.className = `w-10 h-10 flex items-center justify-center rounded-xl font-bold transition-colors ${currentPage === totalPages ? 'bg-slate-100 text-slate-400 cursor-not-allowed dark:bg-slate-800 dark:text-slate-600' : 'bg-white text-slate-700 hover:bg-brand-50 hover:text-brand-600 shadow-sm border border-slate-200 dark:bg-dark-card dark:text-slate-300 dark:border-dark-border dark:hover:bg-slate-700'}`;
+            next.innerHTML = '<i class="fa-solid fa-angle-left"></i>';
+            next.disabled = currentPage === totalPages;
+            next.onclick = () => { currentPage++; renderGrid(); window.scrollTo({top: document.getElementById('products-section').offsetTop - 100, behavior: 'smooth'}); };
+            pagination.appendChild(next);
+        }
+
+        function createPageBtn(num) {
+            const btn = document.createElement('button');
+            const isActive = num === currentPage;
+            btn.className = `w-10 h-10 flex items-center justify-center rounded-xl font-bold transition-all shadow-sm border ${isActive ? 'bg-brand-500 text-white border-brand-500 scale-110' : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 dark:bg-dark-card dark:text-slate-300 dark:border-dark-border dark:hover:bg-slate-700'}`;
+            btn.innerText = num;
+            btn.onclick = () => { currentPage = num; renderGrid(); window.scrollTo({top: document.getElementById('products-section').offsetTop - 100, behavior: 'smooth'}); };
+            return btn;
+        }
+
+        function createDots() {
+            const span = document.createElement('span');
+            span.className = "w-8 h-10 flex items-center justify-center text-slate-400 dark:text-slate-600 font-bold";
+            span.innerText = "...";
+            return span;
+        }
+
+        // Modal Logic
+        function openModal(id) {
+            const prod = db.Products.find(p => p.Id === id);
+            if(!prod) return;
+
+            const subG = db.SubGroups.find(s => s.Id === prod.SubGroupId);
+            const mainG = db.MainGroups.find(m => m.Id === prod.MainGroupId);
+
+            document.getElementById('modalTitle').innerText = prod.Name;
+            document.getElementById('modalImage').src = `images/${prod.ImageName}`;
+            document.getElementById('modalPrice').innerText = prod.FinalPrice !== "0" ? prod.FinalPrice : "تماس بگیرید";
+            document.getElementById('modalUnit').innerText = "واحد: " + (prod.Unit || 'عدد');
+            
+            let groupTxt = [];
+            if(mainG) groupTxt.push(mainG.Name);
+            if(subG) groupTxt.push(subG.Name);
+            document.getElementById('modalGroup').innerText = groupTxt.join(' » ') || 'بدون گروه';
+
+            // Format Info (convert plain text | or newlines to a nice list)
+            let infoHtml = '';
+            if(prod.Information && prod.Information.trim() !== '') {
+                // Some info might be separated by \n or |
+                const lines = prod.Information.split(/\r?\n|\|/).filter(l => l.trim() !== '');
+                if(lines.length > 0) {
+                    infoHtml = '<ul class="space-y-2">';
+                    lines.forEach(line => {
+                        // Bold the keys before colon if any
+                        const parts = line.split(':');
+                        if(parts.length > 1) {
+                            infoHtml += `<li><span class="w-1.5 h-1.5 inline-block bg-brand-500 rounded-full ml-2"></span><strong class="text-slate-800 dark:text-white">${parts[0].trim()}:</strong> <span class="text-slate-600 dark:text-slate-300">${parts.slice(1).join(':').trim()}</span></li>`;
+                        } else {
+                            infoHtml += `<li><span class="w-1.5 h-1.5 inline-block bg-brand-500 rounded-full ml-2"></span>${line.trim()}</li>`;
+                        }
+                    });
+                    infoHtml += '</ul>';
+                } else {
+                    infoHtml = 'اطلاعات بیشتری ثبت نشده است.';
+                }
+            } else {
+                infoHtml = '<span class="italic text-slate-400">اطلاعاتی برای این محصول ثبت نشده است.</span>';
+            }
+            document.getElementById('modalInfo').innerHTML = infoHtml;
+
+            // Show
+            modal.classList.remove('hidden');
+            document.body.classList.add('modal-active');
+            
+            // Trigger animation
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContainer.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContainer.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.classList.remove('modal-active');
+            }, 300);
+        }
+
+        // Dark Mode Logic
+        function setupDarkMode() {
+            const toggle = document.getElementById('darkModeToggle');
+            const html = document.documentElement;
+            
+            // Check local storage or system preference
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            toggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                if (html.classList.contains('dark')) {
+                    localStorage.theme = 'dark';
+                } else {
+                    localStorage.theme = 'light';
+                }
+            });
+        }
+
+        // Mobile Menu Logic
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')) {
+                    icon.className = 'fa-solid fa-bars';
+                } else {
+                    icon.className = 'fa-solid fa-xmark';
+                }
+            });
+        }
+
+        // Start
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

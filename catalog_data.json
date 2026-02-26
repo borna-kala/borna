@@ -1,0 +1,2509 @@
+{
+  "MainGroups": [
+    {
+      "Id": 2,
+      "Name": "الکترونیک"
+    },
+    {
+      "Id": 3,
+      "Name": "برچسب"
+    },
+    {
+      "Id": 5,
+      "Name": "پلاستیک"
+    },
+    {
+      "Id": 4,
+      "Name": "فلز"
+    }
+  ],
+  "SubGroups": [
+    {
+      "Id": 10,
+      "Name": "تابلو ال ای دی",
+      "ParentId": 2
+    },
+    {
+      "Id": 11,
+      "Name": "چراغ راهنما",
+      "ParentId": 2
+    },
+    {
+      "Id": 12,
+      "Name": "چراغ عابر پیاده",
+      "ParentId": 2
+    },
+    {
+      "Id": 13,
+      "Name": "گلمیخ سولار",
+      "ParentId": 2
+    },
+    {
+      "Id": 14,
+      "Name": "ماژول",
+      "ParentId": 2
+    },
+    {
+      "Id": 15,
+      "Name": "مدار فرمان",
+      "ParentId": 2
+    },
+    {
+      "Id": 16,
+      "Name": "معکوس شمار",
+      "ParentId": 2
+    },
+    {
+      "Id": 17,
+      "Name": "نشانگر پلیس",
+      "ParentId": 2
+    },
+    {
+      "Id": 18,
+      "Name": "باتری",
+      "ParentId": 2
+    },
+    {
+      "Id": 19,
+      "Name": "کنترل شارژر",
+      "ParentId": 2
+    },
+    {
+      "Id": 20,
+      "Name": "فلاشر",
+      "ParentId": 2
+    },
+    {
+      "Id": 21,
+      "Name": "صفحه سولار",
+      "ParentId": 2
+    },
+    {
+      "Id": 44,
+      "Name": "آینه محدب",
+      "ParentId": 5
+    },
+    {
+      "Id": 46,
+      "Name": "اجرت پلاستیک",
+      "ParentId": 5
+    },
+    {
+      "Id": 47,
+      "Name": "استاپر",
+      "ParentId": 5
+    },
+    {
+      "Id": 48,
+      "Name": "استوانه ایمنی",
+      "ParentId": 5
+    },
+    {
+      "Id": 49,
+      "Name": "بشکه ایمنی",
+      "ParentId": 5
+    },
+    {
+      "Id": 50,
+      "Name": "بولارد",
+      "ParentId": 5
+    },
+    {
+      "Id": 51,
+      "Name": "جداکننده پلاستیکی",
+      "ParentId": 5
+    },
+    {
+      "Id": 52,
+      "Name": "چشم گربه ای",
+      "ParentId": 5
+    },
+    {
+      "Id": 53,
+      "Name": "سرعتگیر پلاستیکی",
+      "ParentId": 5
+    },
+    {
+      "Id": 54,
+      "Name": "گلمیخ",
+      "ParentId": 5
+    },
+    {
+      "Id": 55,
+      "Name": "مخروط ایمنی",
+      "ParentId": 5
+    },
+    {
+      "Id": 57,
+      "Name": "مواد اولیه پلاستیک",
+      "ParentId": 5
+    },
+    {
+      "Id": 58,
+      "Name": "نیوجرسی پلاستیکی",
+      "ParentId": 5
+    },
+    {
+      "Id": 59,
+      "Name": "کاشن تانک",
+      "ParentId": 5
+    },
+    {
+      "Id": 69,
+      "Name": "آلمینیوم",
+      "ParentId": 4
+    },
+    {
+      "Id": 72,
+      "Name": "اجرت فلز",
+      "ParentId": 4
+    },
+    {
+      "Id": 73,
+      "Name": "فلز خام",
+      "ParentId": 4
+    },
+    {
+      "Id": 74,
+      "Name": "پایه تابلو",
+      "ParentId": 4
+    },
+    {
+      "Id": 75,
+      "Name": "تابلو فریم خام",
+      "ParentId": 4
+    },
+    {
+      "Id": 76,
+      "Name": "تابلو معابر خام",
+      "ParentId": 4
+    },
+    {
+      "Id": 77,
+      "Name": "شبرنگ خام",
+      "ParentId": 3
+    },
+    {
+      "Id": 78,
+      "Name": "روزرنگ خام",
+      "ParentId": 3
+    },
+    {
+      "Id": 79,
+      "Name": "ملزومات تابلو فریم دار",
+      "ParentId": 4
+    },
+    {
+      "Id": 80,
+      "Name": "ملزومات تابلو معابر",
+      "ParentId": 4
+    },
+    {
+      "Id": 81,
+      "Name": "ملزومات پایه",
+      "ParentId": 4
+    },
+    {
+      "Id": 82,
+      "Name": "پیچ و مهره",
+      "ParentId": 4
+    },
+    {
+      "Id": 83,
+      "Name": "ملزومات اقلام پلاستیک",
+      "ParentId": 5
+    },
+    {
+      "Id": 84,
+      "Name": "شبرنگ اقلام پلاستیک",
+      "ParentId": 5
+    },
+    {
+      "Id": 85,
+      "Name": "ملزومات اقلام الکترونیک",
+      "ParentId": 2
+    }
+  ],
+  "Products": [
+    {
+      "Id": 1,
+      "Name": "پيچ 15*8 آبکاري",
+      "FinalPrice": "940",
+      "Unit": "عدد",
+      "Information": "وزن : 10 گرم",
+      "MainGroupId": 4,
+      "SubGroupId": 82,
+      "ImageName": "1.jpg"
+    },
+    {
+      "Id": 2,
+      "Name": "پيچ 25*8 آبکاري",
+      "FinalPrice": "1,100",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 12 گرم",
+      "MainGroupId": 4,
+      "SubGroupId": 82,
+      "ImageName": "2.jpg"
+    },
+    {
+      "Id": 3,
+      "Name": "پيچ 30*8 آبکاري",
+      "FinalPrice": "1,200",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 14 گرم",
+      "MainGroupId": 4,
+      "SubGroupId": 82,
+      "ImageName": "3.jpg"
+    },
+    {
+      "Id": 4,
+      "Name": "پيچ 40*8 آبکاري",
+      "FinalPrice": "1,500",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 17 گرم",
+      "MainGroupId": 4,
+      "SubGroupId": 82,
+      "ImageName": "4.jpg"
+    },
+    {
+      "Id": 5,
+      "Name": "پيچ 50*8 آبکاري",
+      "FinalPrice": "1,700",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 21 گرم",
+      "MainGroupId": 4,
+      "SubGroupId": 82,
+      "ImageName": "5.jpg"
+    },
+    {
+      "Id": 6,
+      "Name": "پيچ 60*8 آبکاري",
+      "FinalPrice": "2,100",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 24 گرم",
+      "MainGroupId": 4,
+      "SubGroupId": 82,
+      "ImageName": "6.jpg"
+    },
+    {
+      "Id": 7,
+      "Name": "مهره 8 آبکاري",
+      "FinalPrice": "530",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 5 گرم",
+      "MainGroupId": 4,
+      "SubGroupId": 82,
+      "ImageName": "7.jpg"
+    },
+    {
+      "Id": 9,
+      "Name": "پيچ سرعتگير",
+      "FinalPrice": "5,700",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "9.jpg"
+    },
+    {
+      "Id": 10,
+      "Name": "واشر سرعتگير",
+      "FinalPrice": "360",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "10.jpg"
+    },
+    {
+      "Id": 11,
+      "Name": "رولپلاک آجدار سرعتگير",
+      "FinalPrice": "1,100",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "11.jpg"
+    },
+    {
+      "Id": 14,
+      "Name": "چسب چشم گربه اي",
+      "FinalPrice": "165,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "14.jpg"
+    },
+    {
+      "Id": 15,
+      "Name": "درپوش 2 اینچ PVC",
+      "FinalPrice": "3,000",
+      "Unit": "عدد",
+      "Information": "قطر : 6 سانتي متر\r\nمناسب : لوله 2 اينچ\r\nبدنه : PVC ژله اي",
+      "MainGroupId": 4,
+      "SubGroupId": 81,
+      "ImageName": "15.jpg"
+    },
+    {
+      "Id": 17,
+      "Name": "درپوش فلزي 2.5 اينچ",
+      "FinalPrice": "7,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 81,
+      "ImageName": "17.jpg"
+    },
+    {
+      "Id": 22,
+      "Name": "بست 1.25 ميل تابلو گير رنگ کوره اي",
+      "FinalPrice": "7,400",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "22.jpg"
+    },
+    {
+      "Id": 23,
+      "Name": "بست 1.25 ميل تابلو گير گالوانيزه",
+      "FinalPrice": "5,800",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "23.jpg"
+    },
+    {
+      "Id": 24,
+      "Name": "بست 1.25 ميل لوله گير رنگ کوره اي",
+      "FinalPrice": "7,400",
+      "Unit": "عدد",
+      "Information": "نوع ورق : سياه\r\nپوشش : رنگ پودري الکترو استااتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "24.jpg"
+    },
+    {
+      "Id": 25,
+      "Name": "بست 1.25 ميل لوله گير گالوانيزه",
+      "FinalPrice": "5,800",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "25.jpg"
+    },
+    {
+      "Id": 26,
+      "Name": "بست 2 ميل تابلو گير رنگ کوره اي",
+      "FinalPrice": "9,100",
+      "Unit": "عدد",
+      "Information": "نوع ورق : سياه\r\nپوشش : کوره اي الکترو استاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "26.jpg"
+    },
+    {
+      "Id": 463,
+      "Name": "بست 2 ميل لوله گير رنگ کوره اي",
+      "FinalPrice": "10,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : سياه\r\nپوشش : کوره اي الکترو استاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "463.jpg"
+    },
+    {
+      "Id": 497,
+      "Name": "چشم گربه اي يک طرفه پلاستيکي پربازتاب",
+      "FinalPrice": "9,300",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 52,
+      "ImageName": "497.jpg"
+    },
+    {
+      "Id": 498,
+      "Name": "برش لیزر ورق 1 میلی متر",
+      "FinalPrice": "7,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "498.jpg"
+    },
+    {
+      "Id": 499,
+      "Name": "رنگ کوره قطر 60",
+      "FinalPrice": "54,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "499.jpg"
+    },
+    {
+      "Id": 29,
+      "Name": "بست 2 ميل لوله گير گالوانيزه",
+      "FinalPrice": "8,700",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "29.jpg"
+    },
+    {
+      "Id": 34,
+      "Name": "بست تابلو راهنمايي رانندگي 1.25 ميل بدون پيچ و مهره رنگي",
+      "FinalPrice": "29,000",
+      "Unit": "عدد",
+      "Information": "تابلو گير : 2 عدد\r\nلوله گير : 2 عدد\r\nنوع ورق : سياه\r\nپوشش : رنگ پودري الکترو استااتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "34.jpg"
+    },
+    {
+      "Id": 35,
+      "Name": "بست تابلو راهنمايي رانندگي 1.25 ميل بدون پيچ و مهره گالوانيزه",
+      "FinalPrice": "23,000",
+      "Unit": "عدد",
+      "Information": "تابلو گير : 2 عدد\r\nلوله گير : 2 عدد\r\nنوع ورق : گالوانيزه 7 الماس کوتينگ 120",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "35.jpg"
+    },
+    {
+      "Id": 38,
+      "Name": "بست تابلو راهنمايي رانندگي 2 ميل بدون پيچ و مهره رنگي",
+      "FinalPrice": "38,000",
+      "Unit": "سری",
+      "Information": "تابلو گير : 2 عدد\r\nلوله گير : 2 عدد\r\nنوع ورق : سياه\r\nپوشش : کوره اي الکترو استاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "38.jpg"
+    },
+    {
+      "Id": 39,
+      "Name": "بست تابلو راهنمايي رانندگي 2 ميل بدون پيچ و مهره گالوانيزه",
+      "FinalPrice": "34,000",
+      "Unit": "سری",
+      "Information": "تابلو گير : 2 عدد\r\nلوله گير : 2 عدد\r\nنوع ورق : گالوانيزه 7 الماس کوتينگ 120",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "39.jpg"
+    },
+    {
+      "Id": 40,
+      "Name": "پيچ و مهره بست لوله اي تابلو فريم دار",
+      "FinalPrice": "11,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "40.jpg"
+    },
+    {
+      "Id": 42,
+      "Name": "بست نقطه جوشي تابلو فريم دار",
+      "FinalPrice": "4,700",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120\r\nضخامت ورق : 1.25 ميلي متر",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "42.jpg"
+    },
+    {
+      "Id": 44,
+      "Name": "بست کتابي 1.25 ميل تابلو معابر بدون پيچ و مهره",
+      "FinalPrice": "68,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 80,
+      "ImageName": "44.jpg"
+    },
+    {
+      "Id": 45,
+      "Name": "بست کتابي 1.25 ميل تابلو معابر بدون پيچ و مهره و گوشواره",
+      "FinalPrice": "51,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 80,
+      "ImageName": "45.jpg"
+    },
+    {
+      "Id": 47,
+      "Name": "بست کتابي 2 ميل تابلو معابر بدون پيچ و مهره",
+      "FinalPrice": "87,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 80,
+      "ImageName": "47.jpg"
+    },
+    {
+      "Id": 460,
+      "Name": "Pe آسيابي درجه يک",
+      "FinalPrice": "42,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "460.jpg"
+    },
+    {
+      "Id": 48,
+      "Name": "بست کتابي 2 ميل تابلو معابر بدون پيچ و مهره و گوشواره",
+      "FinalPrice": "69,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 80,
+      "ImageName": "48.jpg"
+    },
+    {
+      "Id": 49,
+      "Name": "پيچ و مهره بست کتابي تابلو معابر",
+      "FinalPrice": "14,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 80,
+      "ImageName": "49.jpg"
+    },
+    {
+      "Id": 50,
+      "Name": "گوشواره گالوانيزه بست کتابي نمره 6",
+      "FinalPrice": "4,300",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 80,
+      "ImageName": "50.jpg"
+    },
+    {
+      "Id": 51,
+      "Name": "گوشواره گالوانيزه بست کتابي نمره 7",
+      "FinalPrice": "5,100",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 80,
+      "ImageName": "51.jpg"
+    },
+    {
+      "Id": 52,
+      "Name": "کورپی چراغ راهنما",
+      "FinalPrice": "129,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 2,
+      "SubGroupId": 85,
+      "ImageName": "52.jpg"
+    },
+    {
+      "Id": 53,
+      "Name": "واشر فلزی ماژول",
+      "FinalPrice": "360",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 2,
+      "SubGroupId": 85,
+      "ImageName": "53.jpg"
+    },
+    {
+      "Id": 54,
+      "Name": "تابلو ال اي دي 60*120 برقي",
+      "FinalPrice": "4,484,000",
+      "Unit": "عدد",
+      "Information": "ابعاد : 10*60*120 سانتي متر\r\nجنس بدنه : تمام فلز\r\nرنگ بدنه : کوره اي الکترواستاتيک\r\nبرچسب فلش : مشکي براق رده مهندسي\r\nتعداد ال اي دي : 135 عدد با لنز پلي کربنات\r\nمنبع تغزيه : پاورسوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 10,
+      "ImageName": "54.jpg"
+    },
+    {
+      "Id": 55,
+      "Name": "تابلو ال اي دي 60*120 سولار شبانه روزي",
+      "FinalPrice": "5,664,000",
+      "Unit": "عدد",
+      "Information": "ابعاد : 10*60*120 سانتي متر\r\nجنس بدنه : تمام فلز\r\nرنگ بدنه : کوره اي الکترواستاتيک\r\nبرچسب فلش : مشکي براق رده مهندسي\r\nتعداد ال اي دي : 135 عدد با لنز پلي کربنات\r\nمنبع تغزيه : صفحه خورشيدي 10 وات\r\nکنترل شارژر : هوشمند (18برنامه آب و هوايي)\r\nباتري : 12 ولت 9 آمپر",
+      "MainGroupId": 2,
+      "SubGroupId": 10,
+      "ImageName": "55.jpg"
+    },
+    {
+      "Id": 56,
+      "Name": "تابلو ال اي دي 60*60 برقي",
+      "FinalPrice": "2,950,000",
+      "Unit": "عدد",
+      "Information": "ابعاد : 10*60*60 سانتي متر\r\nجنس بدنه : پلي کربنات\r\nجنس صفحه تابلو : فلز\r\nرنگ صفحه تابلو : کوره اي الکترواستاتيک\r\nبرچسب تابلو : شبرنگ رده مهندسي\r\nتعداد ال اي دي : 45 تا 70 عدد با لنز پلي کربنات\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 10,
+      "ImageName": "56.jpg"
+    },
+    {
+      "Id": 57,
+      "Name": "تابلو ال اي دي 60*60 سولار شبانه",
+      "FinalPrice": "4,130,000",
+      "Unit": "عدد",
+      "Information": "ابعاد : 10*60*60 سانتي متر\r\nجنس بدنه : پلي کربنات\r\nجنس صفحه تابلو : فلز\r\nرنگ صفحه تابلو : کوره اي الکترواستاتيک\r\nبرچسب تابلو : شبرنگ رده مهندسي\r\nتعداد ال اي دي : 45 تا 70 عدد با لنز پلي کربنات\r\nمنبع تغزيه : صفحه خورشيدي 3 وات\r\nکنترل شارژر : هوشمند (18برنامه آب و هوايي)\r\nباتري : 12 ولت 4.5 آمپر",
+      "MainGroupId": 2,
+      "SubGroupId": 10,
+      "ImageName": "57.jpg"
+    },
+    {
+      "Id": 58,
+      "Name": "تابلو ال اي دي 60*60 سولار شبانه روزي",
+      "FinalPrice": "4,720,000",
+      "Unit": "عدد",
+      "Information": "ابعاد : 10*60*60 سانتي متر\r\nجنس بدنه : پلي کربنات\r\nجنس صفحه تابلو : فلز\r\nرنگ صفحه تابلو : کوره اي الکترواستاتيک\r\nبرچسب تابلو : شبرنگ رده مهندسي\r\nتعداد ال اي دي : 45 تا 70 عدد با لنز پلي کربنات\r\nمنبع تغزيه : صفحه خورشيدي 6 وات\r\nکنترل شارژر : هوشمند (18برنامه آب و هوايي)\r\nباتري : 12 ولت 4.5 آمپر",
+      "MainGroupId": 2,
+      "SubGroupId": 10,
+      "ImageName": "58.jpg"
+    },
+    {
+      "Id": 59,
+      "Name": "چراغ راهنما تکخانه برقي",
+      "FinalPrice": "944,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nقطر لنز : 30 سانتي متر\r\nتعداد ال اي دي براي هر خانه : 110 عدد\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 11,
+      "ImageName": "59.jpg"
+    },
+    {
+      "Id": 60,
+      "Name": "چراغ راهنما دوخانه برقي",
+      "FinalPrice": "1,888,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nقطر لنز : 30 سانتي متر\r\nتعداد ال اي دي براي هر خانه : 110 عدد\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 11,
+      "ImageName": "60.jpg"
+    },
+    {
+      "Id": 61,
+      "Name": "چراغ راهنما سه خانه برقي",
+      "FinalPrice": "2,832,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nقطر لنزها : 30 سانتي متر\r\nتعداد ال اي دي براي هر خانه : 110 عدد\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 11,
+      "ImageName": "61.jpg"
+    },
+    {
+      "Id": 62,
+      "Name": "چراغ راهنما تکخانه سولار",
+      "FinalPrice": "2,714,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nقطر لنز : 30 سانتي متر\r\nتعداد ال اي دي براي هر خانه : 110 عدد\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nمنبع تغزيه : صفحه خورشيدي 10 وات\r\nکنترل شارژر : هوشمند (18 شرايط آب و هوايي)\r\nباتري : 12 ولت 7.2 آمپر",
+      "MainGroupId": 2,
+      "SubGroupId": 11,
+      "ImageName": "62.jpg"
+    },
+    {
+      "Id": 63,
+      "Name": "چراغ راهنما دوخانه سولار",
+      "FinalPrice": "5,428,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nقطر  لنزها : 30 سانتي متر\r\nتعداد ال اي دي براي هر خانه : 110 عدد\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nمنبع تغزيه : صفحه خورشيدي 20 وات\r\nکنترل شارژر : هوشمند (18 شرايط آب و هوايي)\r\nباتري : 12 ولت 7.2 آمپر (براي هر خانه)",
+      "MainGroupId": 2,
+      "SubGroupId": 11,
+      "ImageName": "63.jpg"
+    },
+    {
+      "Id": 64,
+      "Name": "چراغ راهنما سه خانه سولار",
+      "FinalPrice": "8,142,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nقطر لنزها : 30 سانتي متر\r\nتعداد ال اي دي براي هر خانه : 110 عدد\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nمنبع تغزيه : صفحه خورشيدي 30 وات\r\nکنترل شارژر : هوشمند (18 شرايط آب و هوايي)\r\nباتري : 12 ولت 7.2 آمپر (براي هر خانه)",
+      "MainGroupId": 2,
+      "SubGroupId": 11,
+      "ImageName": "64.jpg"
+    },
+    {
+      "Id": 65,
+      "Name": "چراغ عابر پياده دوخانه متحرک",
+      "FinalPrice": "2,360,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nابعاد لنز ها : 30*30 سانتي متر\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nچيدمان ال اي دي سبز : آدمک متحرک\r\nچيدمان ال اي دي قرمز : آدمک قرمز چشمکزن\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 12,
+      "ImageName": "65.jpg"
+    },
+    {
+      "Id": 66,
+      "Name": "گلميخ سولار يکطرفه چدني",
+      "FinalPrice": "472,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 2,
+      "SubGroupId": 13,
+      "ImageName": "66.jpg"
+    },
+    {
+      "Id": 67,
+      "Name": "گلميخ سولار دوطرفه چدني",
+      "FinalPrice": "495,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 2,
+      "SubGroupId": 13,
+      "ImageName": "67.jpg"
+    },
+    {
+      "Id": 68,
+      "Name": "ماژول ال اي دي 12 ولت",
+      "FinalPrice": "649,000",
+      "Unit": "عدد",
+      "Information": "جنس لنز : پلي کربنات\r\nنوع ال اي دي : 5 ميلي متر 120000 ساعت\r\nشامل : لنز ، کاسه ، برد ال اي دي ، واشر آب بند",
+      "MainGroupId": 2,
+      "SubGroupId": 14,
+      "ImageName": "68.jpg"
+    },
+    {
+      "Id": 69,
+      "Name": "ماژول ال اي دي 220 ولت",
+      "FinalPrice": "708,000",
+      "Unit": "عدد",
+      "Information": "جنس لنز : پلي کربنات\r\nنوع ال اي دي : 5 ميلي متر 120000 ساعت\r\nشامل : لنز ، کاسه ، برد ال اي دي ، واشر آب بند",
+      "MainGroupId": 2,
+      "SubGroupId": 14,
+      "ImageName": "69.jpg"
+    },
+    {
+      "Id": 70,
+      "Name": "ماژول 2 رقمي داخل بدنه معکوس شمار",
+      "FinalPrice": "2,360,000",
+      "Unit": "عدد",
+      "Information": "جنس لنز : پلي کربنات\r\nنوع ال اي دي : 5 ميلي متر 120000 ساعت\r\nنمايشگر : قرمز ، زرد ، سبز\r\nشامل : لنز ، کاسه ، برد ال اي دي ، واشر آب بند",
+      "MainGroupId": 2,
+      "SubGroupId": 14,
+      "ImageName": "70.jpg"
+    },
+    {
+      "Id": 500,
+      "Name": "رنگ کوره 60*60",
+      "FinalPrice": "57,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "500.jpg"
+    },
+    {
+      "Id": 72,
+      "Name": "مدار فرمان 4 زمانه pretime",
+      "FinalPrice": "6,490,000",
+      "Unit": "عدد",
+      "Information": "داراي مد فلاشر يا چشمکزن \r\nقابليت تنظيم نوع رنگ چراغهاي چشمک زن چراغ \r\nداراي چهار مد رنگ\r\nتنظيم بصورت دستي يا فرمان توسط پليس\r\n Fix time  تنظيم روزانه\r\nدر اين قسمت دستگاه بصورت روزانه عمل مي کند زماني که به دستگاه داده مي شود تا آخر همين زمان را نگه ميدارد\r\nweeklyيا pree time تنظيم هفتگي \r\nقابليت تنظيم و زماندهي روزهاي هفته از شنبه تا جمعه و داراي چهار بازه زماني\r\nمد all red, \r\nاين قابليت تمام چراغها را قرمز ثابت نگه ميدارد، تا چهار راه کاملا به فرمان پليس انجام گردد\r\nخروجي مجزا براي عابر پياده\r\nداراي باتري بک آپ قابليت نگه داشتن تنظيمات\r\nدستگاه داراي منوي فارسي و فينگليشن",
+      "MainGroupId": 2,
+      "SubGroupId": 15,
+      "ImageName": "72.jpg"
+    },
+    {
+      "Id": 73,
+      "Name": "معکوس شمار 3 رقمي",
+      "FinalPrice": "5,310,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه : تمام فلز\r\nابعاد : 70*50 سانتي متر\r\nرنگ بدنه : کوره اي الکترواستاتيک\r\nجنس لنزها : پلي کربنات\r\nنوع ال اي دي : اووال ترافيکي 120000 ساعتي\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري\r\nسازه بردها : ماژولار\r\nتحمل دما : از -20 تا +160 درجه سانتيگراد\r\nداراي آيکن تست",
+      "MainGroupId": 2,
+      "SubGroupId": 16,
+      "ImageName": "73.jpg"
+    },
+    {
+      "Id": 74,
+      "Name": "چراغ راهنما سه خانه وسط معکوس شمار",
+      "FinalPrice": "4,720,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nقطر لنزها : 30 سانتي متر\r\nتعداد ال اي دي براي هر خانه : 110 عدد\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 16,
+      "ImageName": "74.jpg"
+    },
+    {
+      "Id": 75,
+      "Name": "معکوس شمار داخل بدنه چراغ راهنما تکخانه",
+      "FinalPrice": "2,360,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه و لنز : پلي کربنات\r\nقطر لنزها : 30 سانتي متر\r\nتعداد ال اي دي براي هر خانه : 110 عدد\r\nنوع ال اي دي : 5 ميليمتر 120000ساعتي\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 16,
+      "ImageName": "75.jpg"
+    },
+    {
+      "Id": 78,
+      "Name": "نشانگر پليس بدنه فلزي دورو برقي",
+      "FinalPrice": "4,484,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه : باکس فلزي\r\nرنگ بدنه : کوره اي الکترو استاتيک\r\nابعاد : طول 80 ، عرض 11 ، عمق 8 سانتي متر\r\nتعداد ال اي دي : 108 عدد\r\nنوع ال اي دي : 5 ميلي متر 120000 ساعت\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 17,
+      "ImageName": "78.jpg"
+    },
+    {
+      "Id": 79,
+      "Name": "نشانگر پليس بدنه فلزي سولار شبانه دورو",
+      "FinalPrice": "5,900,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه : باکس فلزي\r\nرنگ بدنه : کوره اي الکترو استاتيک\r\nابعاد : طول 80 ، عرض 11 ، عمق 8 سانتي متر\r\nتعداد ال اي دي : 108 عدد\r\nنوع ال اي دي : 5 ميلي متر 120000 ساعت\r\nمنبع تغزيه : صفحه خورشيدي 10 وات\r\nباتري : 12 ولت 4.5 آمپر",
+      "MainGroupId": 2,
+      "SubGroupId": 17,
+      "ImageName": "79.jpg"
+    },
+    {
+      "Id": 80,
+      "Name": "نشانگر پليس بدنه فلزي سولار شبانه يکرو",
+      "FinalPrice": "4,484,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه : باکس فلزي\r\nرنگ بدنه : کوره اي الکترو استاتيک\r\nابعاد : طول 80 ، عرض 11 ، عمق 8 سانتي متر\r\nتعداد ال اي دي : 54 عدد\r\nنوع ال اي دي : 5 ميلي متر 120000 ساعت\r\nمنبع تغزيه : صفحه خورشيدي 5 وات\r\nباتري : 12 ولت 4.5 آمپر",
+      "MainGroupId": 2,
+      "SubGroupId": 17,
+      "ImageName": "80.jpg"
+    },
+    {
+      "Id": 81,
+      "Name": "نشانگر پليس بدنه فلزي يکرو برقي",
+      "FinalPrice": "2,950,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه : باکس فلزي\r\nرنگ بدنه : کوره اي الکترو استاتيک\r\nابعاد : طول 80 ، عرض 11 ، عمق 8 سانتي متر\r\nتعداد ال اي دي : 54 عدد\r\nنوع ال اي دي : 5 ميلي متر 120000 ساعت\r\nمنبع تغزيه : پاور سوئيچينگ 220 ولت شهري",
+      "MainGroupId": 2,
+      "SubGroupId": 17,
+      "ImageName": "81.jpg"
+    },
+    {
+      "Id": 82,
+      "Name": "شبرنگ بشکه تمام روز رنگ",
+      "FinalPrice": "39,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 84,
+      "ImageName": "82.jpg"
+    },
+    {
+      "Id": 83,
+      "Name": "شبرنگ بشکه زمينه روز رنگ شکل شبرنگ",
+      "FinalPrice": "57,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 84,
+      "ImageName": "83.jpg"
+    },
+    {
+      "Id": 84,
+      "Name": "شبرنگ بشکه ( اختصاصي )",
+      "FinalPrice": "80,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 84,
+      "ImageName": "84.jpg"
+    },
+    {
+      "Id": 85,
+      "Name": "برچسب استيکر",
+      "FinalPrice": "70,000",
+      "Unit": "مترمربع",
+      "Information": "اطلاعات",
+      "MainGroupId": 3,
+      "SubGroupId": 78,
+      "ImageName": "85.jpg"
+    },
+    {
+      "Id": 86,
+      "Name": "برچسب روز رنگ",
+      "FinalPrice": "70,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 3,
+      "SubGroupId": 78,
+      "ImageName": "86.jpg"
+    },
+    {
+      "Id": 87,
+      "Name": "شبرنگ 1 ساله لانه زنبوري",
+      "FinalPrice": "177,000",
+      "Unit": "مترمربع",
+      "Information": "اطلاعات",
+      "MainGroupId": 3,
+      "SubGroupId": 77,
+      "ImageName": "87.jpg"
+    },
+    {
+      "Id": 88,
+      "Name": "شبرنگ 3 ساله رده مهندسي",
+      "FinalPrice": "194,000",
+      "Unit": "مترمربع",
+      "Information": "اطلاعات",
+      "MainGroupId": 3,
+      "SubGroupId": 77,
+      "ImageName": "88.jpg"
+    },
+    {
+      "Id": 89,
+      "Name": "شبرنگ 7 ساله لانه زنبوري",
+      "FinalPrice": "861,000",
+      "Unit": "مترمربع",
+      "Information": "اطلاعات",
+      "MainGroupId": 3,
+      "SubGroupId": 77,
+      "ImageName": "89.jpg"
+    },
+    {
+      "Id": 91,
+      "Name": "شبرنگ آينه اي طرح کره اي",
+      "FinalPrice": "531,000",
+      "Unit": "مترمربع",
+      "Information": "اطلاعات",
+      "MainGroupId": 3,
+      "SubGroupId": 77,
+      "ImageName": "91.jpg"
+    },
+    {
+      "Id": 0,
+      "Name": "",
+      "FinalPrice": "0",
+      "Unit": "",
+      "Information": "",
+      "MainGroupId": 0,
+      "SubGroupId": 0,
+      "ImageName": "0.jpg"
+    },
+    {
+      "Id": 501,
+      "Name": "رنگ کوره 40*40",
+      "FinalPrice": "23,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "501.jpg"
+    },
+    {
+      "Id": 502,
+      "Name": "رنگ کوره 20*60",
+      "FinalPrice": "22,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "502.jpg"
+    },
+    {
+      "Id": 462,
+      "Name": "پیچ 80*8 آبکاری",
+      "FinalPrice": "2,500",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 30 گرم\r\n",
+      "MainGroupId": 4,
+      "SubGroupId": 82,
+      "ImageName": "462.jpg"
+    },
+    {
+      "Id": 464,
+      "Name": "بست 2 میل تابلو گیر گالوانیزه",
+      "FinalPrice": "8,700",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 79,
+      "ImageName": "464.jpg"
+    },
+    {
+      "Id": 465,
+      "Name": "زوار آلمینیوم سپری",
+      "FinalPrice": "236,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 69,
+      "ImageName": "465.jpg"
+    },
+    {
+      "Id": 503,
+      "Name": "رنگ کوره 50*33",
+      "FinalPrice": "20,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "503.jpg"
+    },
+    {
+      "Id": 504,
+      "Name": "رنگ کوره 75*50",
+      "FinalPrice": "57,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "504.jpg"
+    },
+    {
+      "Id": 505,
+      "Name": "رنگ کوره مثلث 60",
+      "FinalPrice": "35,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "505.jpg"
+    },
+    {
+      "Id": 506,
+      "Name": "رنگ کوره لوله 6 (1 متر)",
+      "FinalPrice": "13,000",
+      "Unit": "مترطول",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "506.jpg"
+    },
+    {
+      "Id": 507,
+      "Name": "رنگ کوره پروفیل 50*50 (1 متر)",
+      "FinalPrice": "20,000",
+      "Unit": "مترطول",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "507.jpg"
+    },
+    {
+      "Id": 508,
+      "Name": "رنگ کوره پروفیل 20*30 (1 متر)",
+      "FinalPrice": "17,000",
+      "Unit": "مترطول",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "508.jpg"
+    },
+    {
+      "Id": 470,
+      "Name": "رنگ پلي اتيلن",
+      "FinalPrice": "177,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "470.jpg"
+    },
+    {
+      "Id": 471,
+      "Name": "رنگ کریستال",
+      "FinalPrice": "200,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "471.jpg"
+    },
+    {
+      "Id": 341,
+      "Name": "آينه محدب پلي کربنات بدنه فلزي قطر 80 سانتي متر",
+      "FinalPrice": "1,831,000",
+      "Unit": "عدد",
+      "Information": "پوشش بدنه : رنگ کوره اي الکترواستاتيک\r\nلوازم : بست و پيچ و مهره اتصال به پايه",
+      "MainGroupId": 5,
+      "SubGroupId": 44,
+      "ImageName": "341.jpg"
+    },
+    {
+      "Id": 342,
+      "Name": "آينه محدب پلي کربنات بدنه فلزي قطر 60 سانتي متر",
+      "FinalPrice": "1,357,000",
+      "Unit": "عدد",
+      "Information": "پوشش بدنه : رنگ کوره اي الکترواستاتيک\r\nلوازم : بست و پيچ و مهره اتصال به پايه",
+      "MainGroupId": 5,
+      "SubGroupId": 44,
+      "ImageName": "342.jpg"
+    },
+    {
+      "Id": 343,
+      "Name": "آينه محدب شيشه اي بدنه فلزي قطر 80 سانتي متر",
+      "FinalPrice": "1,561,000",
+      "Unit": "عدد",
+      "Information": "پوشش بدنه : رنگ کوره اي الکترواستاتيک\r\nلوازم : بست و پيچ و مهره اتصال به پايه",
+      "MainGroupId": 5,
+      "SubGroupId": 44,
+      "ImageName": "343.jpg"
+    },
+    {
+      "Id": 344,
+      "Name": "آينه محدب شيشه اي بدنه فلزي قطر 60 سانتي متر",
+      "FinalPrice": "1,154,000",
+      "Unit": "عدد",
+      "Information": "پوشش بدنه : رنگ کوره اي الکترواستاتيک\r\nلوازم : بست و پيچ و مهره اتصال به پايه",
+      "MainGroupId": 5,
+      "SubGroupId": 44,
+      "ImageName": "344.jpg"
+    },
+    {
+      "Id": 347,
+      "Name": "ضرب استاپر",
+      "FinalPrice": "7,800",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "347.jpg"
+    },
+    {
+      "Id": 348,
+      "Name": "ضرب چشم گربه اي دو طرفه",
+      "FinalPrice": "4,500",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "348.jpg"
+    },
+    {
+      "Id": 349,
+      "Name": "ضرب چشم گربه اي يک طرفه",
+      "FinalPrice": "3,900",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "349.jpg"
+    },
+    {
+      "Id": 350,
+      "Name": "ضرب درپوش PVC",
+      "FinalPrice": "1,900",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "350.jpg"
+    },
+    {
+      "Id": 351,
+      "Name": "ضرب رولپلاک آجدار سرعتگير",
+      "FinalPrice": "520",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "351.jpg"
+    },
+    {
+      "Id": 352,
+      "Name": "ضرب سرعتگير 33*90",
+      "FinalPrice": "52,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "352.jpg"
+    },
+    {
+      "Id": 353,
+      "Name": "ضرب مخروط PVC",
+      "FinalPrice": "26,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "353.jpg"
+    },
+    {
+      "Id": 354,
+      "Name": "ضرب نگين سرعتگير (يک جفت)",
+      "FinalPrice": "1,300",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "354.jpg"
+    },
+    {
+      "Id": 355,
+      "Name": "ضرب کفي سرعتگير (يک عدد)",
+      "FinalPrice": "5,200",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "355.jpg"
+    },
+    {
+      "Id": 356,
+      "Name": "استاپر گرد بدون لوازم",
+      "FinalPrice": "28,000",
+      "Unit": "عدد",
+      "Information": "وزن قطعه بدون لوازم : 250 گرم\r\nقطر : 20 سانتي متر\r\nضخامت : 2 سانتي متر\r\nجنس بدنه : مواد نو pe",
+      "MainGroupId": 5,
+      "SubGroupId": 47,
+      "ImageName": "356.jpg"
+    },
+    {
+      "Id": 358,
+      "Name": "استاپر مستطيل بدون لوازم",
+      "FinalPrice": "25,000",
+      "Unit": "عدد",
+      "Information": "وزن قطعه بدون لوازم : 330 گرم\r\nابعاد  : 15*26  سانتي متر\r\nضخامت : 2 سانتي متر\r\nجنس بدنه : مواد نو pe",
+      "MainGroupId": 5,
+      "SubGroupId": 47,
+      "ImageName": "358.jpg"
+    },
+    {
+      "Id": 362,
+      "Name": "استوانه 45 سانتي متر بدون کفي بدون لوازم",
+      "FinalPrice": "82,000",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 280 گرم\r\nجنس بدنه : مواد نو pe\r\nشبرنگ : لانه زنبوري",
+      "MainGroupId": 5,
+      "SubGroupId": 48,
+      "ImageName": "362.jpg"
+    },
+    {
+      "Id": 364,
+      "Name": "استوانه 75 سانتي متر بدون لوازم (نرم روشن)",
+      "FinalPrice": "170,000",
+      "Unit": "عدد",
+      "Information": "وزن قطعه بدون لوازم : 900 گرم\r\nقطر کفي : 25 سانتي متر\r\nقطر پايين : 12 سانتي متر\r\nقطر بالا : 8 سانتي متر\r\nجنس بدنه : مواد نوPe  + Eva درصد بالا",
+      "MainGroupId": 5,
+      "SubGroupId": 48,
+      "ImageName": "364.jpg"
+    },
+    {
+      "Id": 366,
+      "Name": "استوانه 75 سانتي متر بدون لوازم (خشک روشن)",
+      "FinalPrice": "124,000",
+      "Unit": "عدد",
+      "Information": "وزن قطعه بدون لوازم : 900 گرم\r\nقطر کفي : 25 سانتي متر\r\nقطر پايين : 12 سانتي متر\r\nقطر بالا : 8 سانتي متر\r\nجنس بدنه : Pe",
+      "MainGroupId": 5,
+      "SubGroupId": 48,
+      "ImageName": "366.jpg"
+    },
+    {
+      "Id": 368,
+      "Name": "استوانه مسيرنما 75 بدون لوازم",
+      "FinalPrice": "236,000",
+      "Unit": "عدد",
+      "Information": "وزن قطعه بدون لوازم : 950 گرم\r\nقطر کفي : 22  سانتي متر\r\nقطر پايين : 9  سانتي متر\r\nقطر صفحه شبرنگ : 15 سانتي متر\r\nابعاد صفحه شبرنگ : 25*15 سانتي متر\r\nشبرنگ : رده مهندسي\r\nجنس بدنه : Pe",
+      "MainGroupId": 5,
+      "SubGroupId": 48,
+      "ImageName": "368.jpg"
+    },
+    {
+      "Id": 369,
+      "Name": "کفي استونه 45 سانتي متر",
+      "FinalPrice": "34,000",
+      "Unit": "عدد",
+      "Information": "وزن قطعه : 150 گرم\r\nجنس بدنه : pe",
+      "MainGroupId": 5,
+      "SubGroupId": 48,
+      "ImageName": "369.jpg"
+    },
+    {
+      "Id": 372,
+      "Name": "بشکه ايمني 7 کيلويي با درب بدون شبرنگ",
+      "FinalPrice": "719,000",
+      "Unit": "عدد",
+      "Information": "ارتفاع با درب : 110 سانتي متر",
+      "MainGroupId": 5,
+      "SubGroupId": 49,
+      "ImageName": "372.jpg"
+    },
+    {
+      "Id": 379,
+      "Name": "بولارد بدون شبرنگ",
+      "FinalPrice": "944,000",
+      "Unit": "عدد",
+      "Information": "طول : 35 سانتي متر\r\nعرض : 35 سانتي متر\r\nارتفاع : 105 سانتي متر",
+      "MainGroupId": 5,
+      "SubGroupId": 50,
+      "ImageName": "379.jpg"
+    },
+    {
+      "Id": 380,
+      "Name": "بولارد دورو با شبرنگ رده مهندسي",
+      "FinalPrice": "1,060,000",
+      "Unit": "عدد",
+      "Information": "طول : 35 سانتي متر\r\nعرض : 35 سانتي متر\r\nارتفاع : 105 سانتي متر\r\nابعاد شبرنگ بدنه: 28*52 سانتي متر\r\nقطر شبرنگ بدنه : 28 سانتي متر",
+      "MainGroupId": 5,
+      "SubGroupId": 50,
+      "ImageName": "380.jpg"
+    },
+    {
+      "Id": 482,
+      "Name": "سرعتگير پلاستيکي 50*35 بدون کفی بدون لوازم",
+      "FinalPrice": "141,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 53,
+      "ImageName": "482.jpg"
+    },
+    {
+      "Id": 483,
+      "Name": "کفی سرعتگیر 50*35",
+      "FinalPrice": "29,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 53,
+      "ImageName": "483.jpg"
+    },
+    {
+      "Id": 485,
+      "Name": "پیچ واشر رولپلاک ",
+      "FinalPrice": "7,200",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "485.jpg"
+    },
+    {
+      "Id": 486,
+      "Name": "پیچ واشر رولپلاک استاپر مستطیل",
+      "FinalPrice": "14,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "486.jpg"
+    },
+    {
+      "Id": 488,
+      "Name": "پیچ واشر رولپلاک استاپر گرد",
+      "FinalPrice": "7,200",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "488.jpg"
+    },
+    {
+      "Id": 489,
+      "Name": "پیچ واشر رولپلاک استوانه ایمنی",
+      "FinalPrice": "21,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "489.jpg"
+    },
+    {
+      "Id": 490,
+      "Name": "پیچ واشر رولپلاک بولارد",
+      "FinalPrice": "29,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "490.jpg"
+    },
+    {
+      "Id": 491,
+      "Name": "پیچ واشر رولپلاک جداکننده نیم متری",
+      "FinalPrice": "29,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "491.jpg"
+    },
+    {
+      "Id": 492,
+      "Name": "پیچ واشر رولپلاک ابتدا انتهای جداکننده",
+      "FinalPrice": "29,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "492.jpg"
+    },
+    {
+      "Id": 493,
+      "Name": "پیچ واشر رولپلاک سرعتگیر 90*33",
+      "FinalPrice": "43,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "493.jpg"
+    },
+    {
+      "Id": 494,
+      "Name": "پیچ واشر رولپلاک سرعتگیر 50*35",
+      "FinalPrice": "43,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "494.jpg"
+    },
+    {
+      "Id": 495,
+      "Name": "پیچ واشر رولپلاک سرعتگیر 12*33",
+      "FinalPrice": "14,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "495.jpg"
+    },
+    {
+      "Id": 496,
+      "Name": "پیچ واشر رولپلاک گلمیخ پلاستیکی",
+      "FinalPrice": "7,200",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 83,
+      "ImageName": "496.jpg"
+    },
+    {
+      "Id": 509,
+      "Name": "رنگ کوره 50*100",
+      "FinalPrice": "50,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "509.jpg"
+    },
+    {
+      "Id": 511,
+      "Name": "رنگ کوره 40*100",
+      "FinalPrice": "32,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "511.jpg"
+    },
+    {
+      "Id": 381,
+      "Name": "بولارد دورو با شبرنگ لانه زنبوري 7 ساله",
+      "FinalPrice": "1,460,000",
+      "Unit": "عدد",
+      "Information": "طول : 35 سانتي متر\r\nعرض : 35 سانتي متر\r\nارتفاع : 105 سانتي متر\r\nابعاد شبرنگ بدنه: 28*52 سانتي متر\r\nقطر شبرنگ بدنه : 28 سانتي متر",
+      "MainGroupId": 5,
+      "SubGroupId": 50,
+      "ImageName": "381.jpg"
+    },
+    {
+      "Id": 382,
+      "Name": "بولارد يکرو با شبرنگ رده مهندسي",
+      "FinalPrice": "1,002,000",
+      "Unit": "عدد",
+      "Information": "طول : 35 سانتي متر\r\nعرض : 35 سانتي متر\r\nارتفاع : 105 سانتي متر\r\nابعاد شبرنگ بدنه: 28*52 سانتي متر\r\nقطر شبرنگ بدنه : 28 سانتي متر",
+      "MainGroupId": 5,
+      "SubGroupId": 50,
+      "ImageName": "382.jpg"
+    },
+    {
+      "Id": 383,
+      "Name": "بولارد يکرو با شبرنگ لانه زنبوري 7 ساله",
+      "FinalPrice": "1,202,000",
+      "Unit": "عدد",
+      "Information": "طول : 35 سانتي متر\r\nعرض : 35 سانتي متر\r\nارتفاع : 105 سانتي متر\r\nابعاد شبرنگ بدنه: 28*52 سانتي متر\r\nقطر شبرنگ بدنه : 28 سانتي متر",
+      "MainGroupId": 5,
+      "SubGroupId": 50,
+      "ImageName": "383.jpg"
+    },
+    {
+      "Id": 385,
+      "Name": "ابتدا و انتهاي جداکننده بدون لوازم",
+      "FinalPrice": "123,000",
+      "Unit": "عدد",
+      "Information": "جنس بدنه pe",
+      "MainGroupId": 5,
+      "SubGroupId": 51,
+      "ImageName": "385.jpg"
+    },
+    {
+      "Id": 389,
+      "Name": "جداکننده 10*25*50 بدون استوانه بدون لوازم",
+      "FinalPrice": "129,000",
+      "Unit": "عدد",
+      "Information": "وزن : 1.400 کیلوگرم\r\nجنس بدنه pe\r\nنحوه اتصال : پیچ واشر رولپلاک",
+      "MainGroupId": 5,
+      "SubGroupId": 51,
+      "ImageName": "389.jpg"
+    },
+    {
+      "Id": 394,
+      "Name": "چشم گربه اي دو طرفه پلاستيکي",
+      "FinalPrice": "8,600",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 52,
+      "ImageName": "394.jpg"
+    },
+    {
+      "Id": 395,
+      "Name": "چشم گربه اي دو طرفه پلاستيکي پربازتاب",
+      "FinalPrice": "12,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 52,
+      "ImageName": "395.jpg"
+    },
+    {
+      "Id": 396,
+      "Name": "چشم گربه اي دو طرفه پلاستيکي نگين شيشه",
+      "FinalPrice": "64,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 52,
+      "ImageName": "396.jpg"
+    },
+    {
+      "Id": 397,
+      "Name": "چشم گربه اي يک طرفه پلاستيکي",
+      "FinalPrice": "7,700",
+      "Unit": "عدد",
+      "Information": "جنس بدنه : pe\r\nجنس نگین : pc\r\nابعاد :10*10*2",
+      "MainGroupId": 5,
+      "SubGroupId": 52,
+      "ImageName": "397.jpg"
+    },
+    {
+      "Id": 399,
+      "Name": "چشم گربه اي يک طرفه پلاستيکي نگين شيشه",
+      "FinalPrice": "49,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 52,
+      "ImageName": "399.jpg"
+    },
+    {
+      "Id": 401,
+      "Name": "سرعتگير پلاستيکي 12*33 بدون لوازم",
+      "FinalPrice": "41,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 53,
+      "ImageName": "401.jpg"
+    },
+    {
+      "Id": 512,
+      "Name": "رنگ کوره 31*80",
+      "FinalPrice": "31,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "512.jpg"
+    },
+    {
+      "Id": 513,
+      "Name": "رنگ کوره 31*60",
+      "FinalPrice": "20,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "513.jpg"
+    },
+    {
+      "Id": 516,
+      "Name": "رنگ کوره 25*60",
+      "FinalPrice": "16,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "516.jpg"
+    },
+    {
+      "Id": 517,
+      "Name": "رنگ کوره بست تابلو معابر (هر عدد)",
+      "FinalPrice": "3,900",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "517.jpg"
+    },
+    {
+      "Id": 518,
+      "Name": "رنگ کوره بست تابلو معابر (هر عدد)",
+      "FinalPrice": "3,900",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "518.jpg"
+    },
+    {
+      "Id": 519,
+      "Name": "رنگ کوره بست 2 و 3 سوراخ (هر عدد)",
+      "FinalPrice": "1,300",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "519.jpg"
+    },
+    {
+      "Id": 520,
+      "Name": "ضرب دايره 60 فريم دار",
+      "FinalPrice": "19,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "520.jpg"
+    },
+    {
+      "Id": 521,
+      "Name": " ضرب دايره 37 فريم دار",
+      "FinalPrice": "13,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "521.jpg"
+    },
+    {
+      "Id": 522,
+      "Name": " ضرب هشت وجهي 60 فريم دار",
+      "FinalPrice": "19,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "522.jpg"
+    },
+    {
+      "Id": 523,
+      "Name": " ضرب مثلث 60 فريم دار",
+      "FinalPrice": "13,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "523.jpg"
+    },
+    {
+      "Id": 524,
+      "Name": " ضرب 20*60 فريم دار",
+      "FinalPrice": "9,100",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "524.jpg"
+    },
+    {
+      "Id": 525,
+      "Name": " ضرب 60*60 فريم دار",
+      "FinalPrice": "19,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "525.jpg"
+    },
+    {
+      "Id": 406,
+      "Name": "سرعتگير پلاستيکي 33*90 بدون کفي بدون  لوازم",
+      "FinalPrice": "195,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 53,
+      "ImageName": "406.jpg"
+    },
+    {
+      "Id": 408,
+      "Name": "نگين سرعتگير 33*90 (يک جفت)",
+      "FinalPrice": "1,700",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 53,
+      "ImageName": "408.jpg"
+    },
+    {
+      "Id": 409,
+      "Name": "کفي سرعتگير 33*90 (يک جفت)",
+      "FinalPrice": "31,000",
+      "Unit": "جفت",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 53,
+      "ImageName": "409.jpg"
+    },
+    {
+      "Id": 411,
+      "Name": "گلميخ پلاستيکي منجوقی بدون لوازم",
+      "FinalPrice": "31,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 54,
+      "ImageName": "411.jpg"
+    },
+    {
+      "Id": 415,
+      "Name": "مخروط کف لاستيکي ارتفاع 75",
+      "FinalPrice": "122,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 55,
+      "ImageName": "415.jpg"
+    },
+    {
+      "Id": 417,
+      "Name": "مخروط Pe ارتفاع 60",
+      "FinalPrice": "77,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 55,
+      "ImageName": "417.jpg"
+    },
+    {
+      "Id": 419,
+      "Name": "مخروط PVC ارتفاع 60",
+      "FinalPrice": "101,000",
+      "Unit": "عدد",
+      "Information": "pvc  خالص\r\nارتفاع دقيق بدون راگا 55\r\nوزن 960 گرم",
+      "MainGroupId": 5,
+      "SubGroupId": 55,
+      "ImageName": "419.jpg"
+    },
+    {
+      "Id": 422,
+      "Name": "Crystal 1540",
+      "FinalPrice": "59,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "422.jpg"
+    },
+    {
+      "Id": 423,
+      "Name": "Eva 18%",
+      "FinalPrice": "129,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "423.jpg"
+    },
+    {
+      "Id": 427,
+      "Name": "Pe 1922",
+      "FinalPrice": "59,000",
+      "Unit": "کیلو گرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "427.jpg"
+    },
+    {
+      "Id": 480,
+      "Name": "PVC آسیابی مشکی",
+      "FinalPrice": "53,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "480.jpg"
+    },
+    {
+      "Id": 481,
+      "Name": "ضرب استوانه ایمنی",
+      "FinalPrice": "45,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 46,
+      "ImageName": "481.jpg"
+    },
+    {
+      "Id": 526,
+      "Name": " ضرب 50*75 فريم دار",
+      "FinalPrice": "19,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "526.jpg"
+    },
+    {
+      "Id": 527,
+      "Name": " ضرب 40*40 فريم دار",
+      "FinalPrice": "13,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "527.jpg"
+    },
+    {
+      "Id": 528,
+      "Name": " ضرب 33*50 محدب فريم دار",
+      "FinalPrice": "10,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "528.jpg"
+    },
+    {
+      "Id": 529,
+      "Name": " ضرب 33*50 تخت فريم دار",
+      "FinalPrice": "13,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "529.jpg"
+    },
+    {
+      "Id": 530,
+      "Name": " ضرب بست تابلو فريم دار (هر عدد)",
+      "FinalPrice": "1,300",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "530.jpg"
+    },
+    {
+      "Id": 531,
+      "Name": " ضرب صفحه بست کتابي (هر عدد)",
+      "FinalPrice": "2,600",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "531.jpg"
+    },
+    {
+      "Id": 532,
+      "Name": " ضرب گوشواره بست کتابي (هر عدد)",
+      "FinalPrice": "1,300",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "532.jpg"
+    },
+    {
+      "Id": 533,
+      "Name": " ضرب صفحه تابلو معابر خمکاري",
+      "FinalPrice": "19,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "533.jpg"
+    },
+    {
+      "Id": 534,
+      "Name": " ضرب صفحه تابلو معابر زوار آلومينيوم",
+      "FinalPrice": "32,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "534.jpg"
+    },
+    {
+      "Id": 535,
+      "Name": " ضرب واشر سرعتگير",
+      "FinalPrice": "130",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "535.jpg"
+    },
+    {
+      "Id": 536,
+      "Name": " ضرب بست نقطه جوشي (هر عدد)",
+      "FinalPrice": "1,300",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "536.jpg"
+    },
+    {
+      "Id": 537,
+      "Name": "آلومینیوم سپری معابر",
+      "FinalPrice": "236,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "537.jpg"
+    },
+    {
+      "Id": 432,
+      "Name": "نيوجرسي پلاستيکي 100*70*40 سانتي متر",
+      "FinalPrice": "1,062,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 58,
+      "ImageName": "432.jpg"
+    },
+    {
+      "Id": 433,
+      "Name": "نيوجرسي پلاستيکي 200*100*60 سانتي متر",
+      "FinalPrice": "3,799,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 58,
+      "ImageName": "433.jpg"
+    },
+    {
+      "Id": 434,
+      "Name": "ريل کاشن تانک (یک جفت)",
+      "FinalPrice": "542,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 59,
+      "ImageName": "434.jpg"
+    },
+    {
+      "Id": 435,
+      "Name": "شبرنگ 3 ساله کاشن تانک",
+      "FinalPrice": "472,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 59,
+      "ImageName": "435.jpg"
+    },
+    {
+      "Id": 436,
+      "Name": "کاشن تانک 90*90*90 بدون ريل بدون شبرنگ",
+      "FinalPrice": "3,540,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 59,
+      "ImageName": "436.jpg"
+    },
+    {
+      "Id": 538,
+      "Name": "پروفيل سياه 2 ميلي متر",
+      "FinalPrice": "59,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "538.jpg"
+    },
+    {
+      "Id": 539,
+      "Name": "لوله سياه 1.8 ميليمتر",
+      "FinalPrice": "60,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "539.jpg"
+    },
+    {
+      "Id": 540,
+      "Name": "لوله سياه 2 ميليمتر",
+      "FinalPrice": "62,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "540.jpg"
+    },
+    {
+      "Id": 541,
+      "Name": "ميلگرد آجدار",
+      "FinalPrice": "47,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "541.jpg"
+    },
+    {
+      "Id": 542,
+      "Name": "ورق سياه 2 ميليمتر",
+      "FinalPrice": "57,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "542.jpg"
+    },
+    {
+      "Id": 543,
+      "Name": "ورق گالوانيزه 1 ميليمتر",
+      "FinalPrice": "61,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "543.jpg"
+    },
+    {
+      "Id": 544,
+      "Name": "ورق گالوانيزه 1.25 ميليمتر",
+      "FinalPrice": "61,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "544.jpg"
+    },
+    {
+      "Id": 545,
+      "Name": "ورق گالوانيزه 2 ميليمتر",
+      "FinalPrice": "67,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 73,
+      "ImageName": "545.jpg"
+    },
+    {
+      "Id": 546,
+      "Name": "پايه پروفيل 2*20*30 ميلي متر 1.2 متر رنگ کوره ای",
+      "FinalPrice": "129,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 74,
+      "ImageName": "546.jpg"
+    },
+    {
+      "Id": 547,
+      "Name": "پايه تابلو لوله اي نمره 6 ارتفاع 1.5 متر رنگ کوره اي",
+      "FinalPrice": "338,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 74,
+      "ImageName": "547.jpg"
+    },
+    {
+      "Id": 548,
+      "Name": "پايه تابلو لوله اي 1.8 ميل نمره 6 ارتفاع 3 متر رنگ کوره اي",
+      "FinalPrice": "592,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 74,
+      "ImageName": "548.jpg"
+    },
+    {
+      "Id": 549,
+      "Name": "پايه تابلو لوله اي 2 ميل نمره 6 ارتفاع 3 متر رنگ کوره اي",
+      "FinalPrice": "669,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 74,
+      "ImageName": "549.jpg"
+    },
+    {
+      "Id": 550,
+      "Name": "پايه تابلو لوله اي نمره 7 ارتفاع 3 متر رنگ کوره اي",
+      "FinalPrice": "890,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 74,
+      "ImageName": "550.jpg"
+    },
+    {
+      "Id": 551,
+      "Name": "تابلو دايره فريم دار قطر 37 گالوانيزه بدون شبرنگ",
+      "FinalPrice": "146,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه(مناسب براي نقاط با\r\n رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "551.jpg"
+    },
+    {
+      "Id": 553,
+      "Name": "تابلو مثلث فريم دار ارتفاع 60 گالوانيزه بدون شبرنگ",
+      "FinalPrice": "240,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه\r\n(مناسب براي نقاط با رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "553.jpg"
+    },
+    {
+      "Id": 472,
+      "Name": "شبرنگ نگين چشم گربه اي پربازتاب",
+      "FinalPrice": "1,100",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 84,
+      "ImageName": "472.jpg"
+    },
+    {
+      "Id": 473,
+      "Name": "Pe گرانول مشکی",
+      "FinalPrice": "27,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "473.jpg"
+    },
+    {
+      "Id": 478,
+      "Name": "PVC آسيابي بيرنگ",
+      "FinalPrice": "64,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "478.jpg"
+    },
+    {
+      "Id": 479,
+      "Name": "PVC نو",
+      "FinalPrice": "94,000",
+      "Unit": "کیلوگرم",
+      "Information": "اطلاعات",
+      "MainGroupId": 5,
+      "SubGroupId": 57,
+      "ImageName": "479.jpg"
+    },
+    {
+      "Id": 554,
+      "Name": "تابلو مربع فريم دار 40*40 گالوانيزه بدون شبرنگ",
+      "FinalPrice": "174,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه\r\n(مناسب براي نقاط با رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "554.jpg"
+    },
+    {
+      "Id": 555,
+      "Name": "تابلو مربع فريم دار 60*60 گالوانيزه بدون شبرنگ",
+      "FinalPrice": "340,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه\r\n(مناسب براي نقاط با رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "555.jpg"
+    },
+    {
+      "Id": 556,
+      "Name": "تابلو مستطيل فريم دار 60*20 گالوانيزه بدون شبرنگ",
+      "FinalPrice": "131,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه\r\n(مناسب براي نقاط با رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "556.jpg"
+    },
+    {
+      "Id": 557,
+      "Name": "تابلو مستطيل فريم دار 50*33 تخت گالوانيزه بدون شبرنگ",
+      "FinalPrice": "182,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه\r\n(مناسب براي نقاط با رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "557.jpg"
+    },
+    {
+      "Id": 558,
+      "Name": "تابلو مستطيل فريم دار 50*33 محدب گالوانيزه بدون شبرنگ",
+      "FinalPrice": "172,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه\r\n(مناسب براي نقاط با رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "558.jpg"
+    },
+    {
+      "Id": 559,
+      "Name": "تابلو مستطيل فريم دار 50*75 گالوانيزه بدون شبرنگ",
+      "FinalPrice": "377,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه\r\n(مناسب براي نقاط با رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "559.jpg"
+    },
+    {
+      "Id": 560,
+      "Name": "تابلو دایره فريم دار قطر 60 گالوانيزه بدون شبرنگ",
+      "FinalPrice": "355,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : گالوانيزه 7 الماس کوتينگ 120   \r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده (فريم دار و لبه برگردان)\r\nپوشش : از جنس گالوانيزه\r\n(مناسب براي نقاط با رطوبت بالا و شرجي)",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "560.jpg"
+    },
+    {
+      "Id": 561,
+      "Name": "تابلو دايره فريم دار قطر 37 کوره ای بدون شبرنگ",
+      "FinalPrice": "171,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "561.jpg"
+    },
+    {
+      "Id": 562,
+      "Name": "تابلو هشت وجهي فريم دار قطر 60 گالوانيزه بدون شبرنگ",
+      "FinalPrice": "304,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "562.jpg"
+    },
+    {
+      "Id": 563,
+      "Name": "تابلو مثلث فريم دار ارتفاع 60 کوره ای بدون شبرنگ",
+      "FinalPrice": "277,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "563.jpg"
+    },
+    {
+      "Id": 564,
+      "Name": "تابلو مربع فريم دار 40*40 کوره ای بدون شبرنگ",
+      "FinalPrice": "199,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "564.jpg"
+    },
+    {
+      "Id": 565,
+      "Name": "تابلو مربع فريم دار 60*60 کوره ای بدون شبرنگ",
+      "FinalPrice": "402,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "565.jpg"
+    },
+    {
+      "Id": 566,
+      "Name": "تابلو مستطيل فريم دار 60*20 کوره ای بدون شبرنگ",
+      "FinalPrice": "154,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "566.jpg"
+    },
+    {
+      "Id": 569,
+      "Name": "تابلو مستطيل فريم دار 50*33 تخت کوره ای بدون شبرنگ",
+      "FinalPrice": "204,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "569.jpg"
+    },
+    {
+      "Id": 570,
+      "Name": "تابلو مستطيل فريم دار 50*33 محدب کوره ای بدون شبرنگ",
+      "FinalPrice": "197,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "570.jpg"
+    },
+    {
+      "Id": 571,
+      "Name": "تابلو مستطيل فريم دار 50*75 کوره ای بدون شبرنگ",
+      "FinalPrice": "438,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "571.jpg"
+    },
+    {
+      "Id": 572,
+      "Name": "تابلو هشت وجهي فريم دار قطر 60 کوره ای بدون شبرنگ",
+      "FinalPrice": "363,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "572.jpg"
+    },
+    {
+      "Id": 573,
+      "Name": "تابلو معابر 31*60 کتابي بدون نوشتار بدون لوازم",
+      "FinalPrice": "247,000",
+      "Unit": "سری",
+      "Information": "نوع ورق سياه : فولاد مبارکه St37\r\nنوع ورق گالوانيزه : 7 الماس کوتينگ 120\r\nضخامت ورق صفحه تابلو : 2 ميلي متر\r\nفرم تابلو : بالا و پايين پرس به صورت همزمان\r\n\r\nپوشش : رنگ پودري کوره اي الکترو استاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "573.jpg"
+    },
+    {
+      "Id": 574,
+      "Name": "تابلو معابر 31*80 کتابي بدون نوشتار بدون لوازم",
+      "FinalPrice": "326,000",
+      "Unit": "سری",
+      "Information": "نوع ورق سياه : فولاد مبارکه St37\r\nنوع ورق گالوانيزه : 7 الماس کوتينگ 120\r\nضخامت ورق صفحه تابلو : 2 ميلي متر\r\nفرم تابلو : بالا و پايين پرس به صورت همزمان\r\nضخامت صفحه لوازم : 1.25 ميلي متر\r\nپوشش : رنگ پودري کوره اي الکترو استاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "574.jpg"
+    },
+    {
+      "Id": 575,
+      "Name": "تابلو معابر 31*80 کتابي با زوار آلومينيوم بدون نوشتار بدون لوازم",
+      "FinalPrice": "410,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "575.jpg"
+    },
+    {
+      "Id": 576,
+      "Name": "تابلو معابر 40*100 کتابي خمکاري بدون نوشتار بدون لوازم",
+      "FinalPrice": "484,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "576.jpg"
+    },
+    {
+      "Id": 577,
+      "Name": "تابلو معابر 40*100 کتابي با زوار آلومينيوم بدون نوشتار بدون لوازم",
+      "FinalPrice": "609,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "577.jpg"
+    },
+    {
+      "Id": 578,
+      "Name": "تابلو معابر 50*100 کتابي خمکاري بدون نوشتار بدون لوازم",
+      "FinalPrice": "606,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "578.jpg"
+    },
+    {
+      "Id": 579,
+      "Name": "تابلو معابر 50*100 کتابي با زوار آلومينيوم بدون نوشتار بدون لوازم",
+      "FinalPrice": "759,000",
+      "Unit": "سری",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "579.jpg"
+    },
+    {
+      "Id": 580,
+      "Name": "تابلو معابر 31*80 ديواري بدون نوشتار ضخامت 1.25 ميليمتر",
+      "FinalPrice": "209,000",
+      "Unit": "سری",
+      "Information": "ورق : روغني فولاد غرب st12\r\nفرم : بدون لبه\r\nنحوه نصب : سوراخ کاري شده براي نصب روي ديوار\r\nپوشش : رنگ پودري کوره اي الکترو استاتيک\r\n",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "580.jpg"
+    },
+    {
+      "Id": 581,
+      "Name": "تابلو معابر 31*80 ديواري بدون نوشتار ضخامت 2 ميليمتر",
+      "FinalPrice": "292,000",
+      "Unit": "سری",
+      "Information": "ورق : روغني فولاد غرب st12\r\nفرم : بدون لبه\r\nنحوه نصب : سوراخ کاري شده براي نصب روي ديوار\r\nپوشش : رنگ پودري کوره اي الکترو استاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "581.jpg"
+    },
+    {
+      "Id": 582,
+      "Name": "تابلو معابر 31*60 ديواري بدون نوشتار ضخامت 1.25 ميليمتر",
+      "FinalPrice": "152,000",
+      "Unit": "سری",
+      "Information": "ورق : روغني فولاد غرب st12\r\nفرم : بدون لبه\r\nنحوه نصب : سوراخ کاري شده براي نصب روي ديوار\r\nپوشش : رنگ پودري کوره اي الکترو استاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "582.jpg"
+    },
+    {
+      "Id": 583,
+      "Name": "تابلو معابر 25*60 ديواري بدون نوشتار ضخامت 1.25 ميليمتر",
+      "FinalPrice": "123,000",
+      "Unit": "سری",
+      "Information": "ورق : روغني فولاد غرب st12\r\nفرم : بدون لبه\r\nنحوه نصب : سوراخ کاري شده براي نصب روي ديوار\r\nپوشش : رنگ پودري کوره اي الکترو استاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 76,
+      "ImageName": "583.jpg"
+    },
+    {
+      "Id": 584,
+      "Name": "رنگ کوره لوله 7 (1 متر)",
+      "FinalPrice": "15,000",
+      "Unit": "مترطول",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "584.jpg"
+    },
+    {
+      "Id": 585,
+      "Name": "رنگ کوره دايره قطر 37",
+      "FinalPrice": "23,000",
+      "Unit": "عدد",
+      "Information": "اطلاعات",
+      "MainGroupId": 4,
+      "SubGroupId": 72,
+      "ImageName": "585.jpg"
+    },
+    {
+      "Id": 586,
+      "Name": "تابلو دايره فريم دار قطر 60 کوره ای بدون شبرنگ",
+      "FinalPrice": "413,000",
+      "Unit": "عدد",
+      "Information": "نوع ورق : روغني فولاد غرب St12\r\nضخامت ورق : 1.25 ميلي متر\r\nفرم تابلو : پرس شده ( فريم دار لبه برگردان)\r\nپوشش : رنگ پودري کوره اي الکترواستاتيک",
+      "MainGroupId": 4,
+      "SubGroupId": 75,
+      "ImageName": "586.jpg"
+    }
+  ]
+}

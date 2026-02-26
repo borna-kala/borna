@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | برنا ترافیک</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'Tahoma', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            900: '#7c2d12',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        },
+                        telegram: {
+                            main: '#0088cc',
+                            hover: '#0077b3'
+                        },
+                        whatsapp: {
+                            main: '#25D366',
+                        },
+                        instagram: {
+                            main: '#E1306C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        .dark ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        body { font-family: 'Vazirmatn', sans-serif; }
+        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
+        
+        /* دکمه تلگرام انیمیشن */
+        .btn-social:hover i { transform: scale(1.2) rotate(-5deg); transition: transform 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 dark:bg-dark-bg dark:text-slate-200 transition-all duration-300 flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-dark-card/90 backdrop-blur-md shadow-md transition-colors duration-300 border-b border-slate-200 dark:border-dark-border">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-road text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl lg:text-2xl text-slate-900 dark:text-white tracking-tight group-hover:text-brand-500 transition-colors">برنا ترافیک</h1>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">تجهیزات شهری و جاده‌ای</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="hover:text-brand-500 transition-colors">صفحه اصلی</a>
+                    <a href="index.html#products-section" class="hover:text-brand-500 transition-colors">محصولات</a>
+                    <a href="projects.html" class="hover:text-brand-500 transition-colors">پروژه ها</a>
+                    <a href="articles.html" class="hover:text-brand-500 transition-colors">مطالب</a>
+                    <a href="about.html" class="hover:text-brand-500 transition-colors">درباره ما</a>
+                    <a href="contact.html" class="text-brand-500 font-bold border-b-2 border-brand-500 pb-1">تماس با ما</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-4">
+                    <button id="darkModeToggle" class="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="تغییر تم">
+                        <i class="fa-solid fa-moon text-slate-700 dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun text-yellow-400 hidden dark:inline-block text-lg"></i>
+                    </button>
+                    
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 dark:text-slate-300 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-dark-card border-t border-slate-100 dark:border-dark-border px-4 py-4 space-y-3 shadow-inner absolute w-full z-50">
+            <a href="index.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">صفحه اصلی</a>
+            <a href="index.html#products-section" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">محصولات</a>
+            <a href="projects.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">پروژه ها</a>
+            <a href="articles.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">مطالب</a>
+            <a href="about.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">درباره ما</a>
+            <a href="contact.html" class="block px-4 py-2 text-brand-500 font-medium bg-brand-50 dark:bg-slate-800 rounded-lg">تماس با ما</a>
+        </div>
+    </header>
+
+    <!-- Page Header (Hero) -->
+    <section class="relative bg-slate-800 text-white overflow-hidden py-16 lg:py-20">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-4">با ما در <span class="text-brand-500">تماس باشید</span></h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">برای دریافت مشاوره رایگان، استعلام قیمت، ثبت سفارش و پشتیبانی پروژه‌ها، کارشناسان برنا ترافیک آماده پاسخگویی به شما هستند.</p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <main class="flex-grow container mx-auto px-4 py-16">
+        <div class="flex flex-col lg:flex-row gap-10">
+            
+            <!-- Right Column: Contact Info -->
+            <div class="w-full lg:w-5/12 space-y-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-2 h-8 bg-brand-500 rounded-full"></div>
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white">راه‌های ارتباطی با برنا ترافیک</h3>
+                </div>
+
+                <!-- HQ Address Card -->
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-dark-border hover:border-brand-500 transition-colors group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 group-hover:bg-brand-500 group-hover:text-white transition-colors shrink-0">
+                            <i class="fa-solid fa-building text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2">دفتر مرکزی</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-3">تهران - زعفرانیه - اردیبهشت مرکزی - پلاک ۱۰</p>
+                            <div class="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold" dir="ltr">
+                                <i class="fa-solid fa-phone text-sm"></i>
+                                <span>021 2680 4717</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Factory Address Card -->
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-dark-border hover:border-brand-500 transition-colors group">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 group-hover:bg-brand-500 group-hover:text-white transition-colors shrink-0">
+                            <i class="fa-solid fa-industry text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2">دفتر فروش و کارخانه</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-3">مازندران - بابل - شهرک صنعتی منصور کنده - قطعه K5,K4</p>
+                            <div class="flex flex-col gap-2 text-brand-600 dark:text-brand-400 font-bold">
+                                <div class="flex items-center gap-2 justify-end" dir="ltr">
+                                    <span>011 3207 3651-3</span>
+                                    <i class="fa-solid fa-phone text-sm"></i>
+                                </div>
+                                <div class="flex items-center gap-2 justify-end" dir="ltr">
+                                    <span>0911 118 0970</span>
+                                    <i class="fa-solid fa-mobile-screen text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Info Card -->
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-dark-border grid grid-cols-2 gap-4">
+                    <div>
+                        <div class="text-slate-500 dark:text-slate-400 text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-fax"></i> فکس
+                        </div>
+                        <div class="text-slate-800 dark:text-white font-bold" dir="ltr">011 3207 2298</div>
+                    </div>
+                    <div>
+                        <div class="text-slate-500 dark:text-slate-400 text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-envelope"></i> ایمیل
+                        </div>
+                        <a href="mailto:Info@Bornatraffic.com" class="text-slate-800 dark:text-white font-bold hover:text-brand-500 transition-colors text-sm">Info@Bornatraffic.com</a>
+                    </div>
+                    <div class="col-span-2 pt-3 border-t border-slate-100 dark:border-slate-800">
+                        <div class="text-slate-500 dark:text-slate-400 text-sm mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-clock"></i> ساعات کاری
+                        </div>
+                        <div class="text-slate-800 dark:text-white font-bold">شنبه تا پنج شنبه - ۸ صبح الی ۱۶ عصر</div>
+                    </div>
+                </div>
+
+                <!-- Social Media Direct Links -->
+                <div class="bg-slate-100 dark:bg-slate-800/50 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
+                    <h4 class="font-bold text-slate-800 dark:text-white mb-4 text-center">ارتباط مستقیم در شبکه‌های اجتماعی</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://t.me/bornatraffic" target="_blank" class="btn-social flex items-center justify-center gap-2 bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-700 py-3 rounded-xl hover:border-[#0088cc] hover:text-[#0088cc] transition-colors">
+                            <i class="fa-brands fa-telegram text-[#0088cc] text-xl"></i> کانال تلگرام
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+989351180970" target="_blank" class="btn-social flex items-center justify-center gap-2 bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-700 py-3 rounded-xl hover:border-[#25D366] hover:text-[#25D366] transition-colors">
+                            <i class="fa-brands fa-whatsapp text-[#25D366] text-xl"></i> واتساپ
+                        </a>
+                        <a href="https://www.instagram.com/bornatraffic" target="_blank" class="btn-social flex items-center justify-center gap-2 bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-700 py-3 rounded-xl hover:border-[#E1306C] hover:text-[#E1306C] transition-colors">
+                            <i class="fa-brands fa-instagram text-[#E1306C] text-xl"></i> اینستاگرام
+                        </a>
+                        <a href="https://facebook.com/Bornatraffic" target="_blank" class="btn-social flex items-center justify-center gap-2 bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-700 py-3 rounded-xl hover:border-[#1877F2] hover:text-[#1877F2] transition-colors">
+                            <i class="fa-brands fa-facebook-f text-[#1877F2] text-xl"></i> فیسبوک
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Left Column: Telegram Contact Form -->
+            <div class="w-full lg:w-7/12 mt-10 lg:mt-0">
+                <div class="bg-white dark:bg-dark-card rounded-3xl p-6 md:p-10 shadow-xl shadow-brand-500/5 border border-slate-200 dark:border-dark-border relative overflow-hidden h-full flex flex-col justify-center">
+                    
+                    <!-- BG decoration -->
+                    <div class="absolute -top-24 -left-24 w-48 h-48 bg-telegram-main opacity-10 rounded-full blur-3xl"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-telegram-main/10 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-brands fa-telegram text-4xl text-telegram-main"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-800 dark:text-white mb-2">ارسال پیام فوری</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-8">پیام شما مستقیماً به شماره اختصاصی <span class="font-bold text-telegram-main" dir="ltr">+98 912 852 5355</span> در تلگرام ارسال خواهد شد تا در سریع‌ترین زمان ممکن پاسخگوی شما باشیم.</p>
+                        
+                        <form id="telegramForm" onsubmit="sendTelegramMessage(event)" class="space-y-5">
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <!-- Name -->
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">نام و نام خانوادگی</label>
+                                    <input type="text" id="senderName" required placeholder="مثال: علی محمدی" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-telegram-main focus:border-transparent transition-all">
+                                </div>
+                                
+                                <!-- Phone -->
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">شماره تماس شما</label>
+                                    <input type="tel" id="senderPhone" required dir="ltr" placeholder="0912..." class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl py-3 px-4 text-right focus:outline-none focus:ring-2 focus:ring-telegram-main focus:border-transparent transition-all">
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">متن درخواست یا سفارش</label>
+                                <textarea id="senderMessage" required rows="4" placeholder="سلام، درخواست استعلام قیمت برای کالاها را دارم..." class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-telegram-main focus:border-transparent transition-all resize-none"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="w-full bg-telegram-main hover:bg-telegram-hover text-white font-bold text-lg py-4 rounded-xl transition-all transform hover:-translate-y-1 shadow-lg shadow-telegram-main/30 flex justify-center items-center gap-3">
+                                <i class="fa-solid fa-paper-plane"></i> ارسال به کارشناس در تلگرام
+                            </button>
+                            <p class="text-xs text-center text-slate-400 mt-3">با کلیک روی این دکمه، اپلیکیشن تلگرام شما برای ارسال پیام باز می‌شود.</p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-4 border-brand-500 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <div>
+                    <h4 class="text-white text-xl font-bold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-industry text-brand-500"></i> برنا ترافیک
+                    </h4>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-400">
+                        مجموعه صنعتی برنا ترافیک با سال‌ها تجربه در تولید محصولات شهری، جاده‌ای و الکترونیک، آماده خدمت‌رسانی و اجرای پروژه‌های بزرگ در سراسر کشور می‌باشد.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://api.whatsapp.com/send?phone=+989351180970" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                        <a href="https://t.me/bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0088cc] hover:text-white transition-colors"><i class="fa-brands fa-telegram text-lg"></i></a>
+                        <a href="https://www.instagram.com/bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#E1306C] hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://facebook.com/Bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">محصولات ما</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تابلوهای معرفی معابر، اماکن، تزئینی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تجهیزات ترافیکی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پل های عابر پیاده</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مبلمان شهری (نیمکت، سطل)</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> وسایل پارکی، بازی فلزی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پایه چراغ ها و روشنایی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مجموعه پلی اتیلن بازی کودکان</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پرچم و پایه پرچم</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">دسترسی سریع</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> صفحه اصلی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> محصولات</a></li>
+                        <li><a href="projects.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پروژه ها</a></li>
+                        <li><a href="articles.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مطالب</a></li>
+                        <li><a href="about.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> درباره ما</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">ارتباط با ما</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-500"></i>
+                            <div>
+                                <strong class="block text-white mb-1">دفتر مرکزی:</strong>
+                                <span>تهران - زعفرانیه - اردیبهشت مرکزی - پلاک 10</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-industry mt-1 text-brand-500"></i>
+                            <div>
+                                <strong class="block text-white mb-1">کارخانه و فروش:</strong>
+                                <span>مازندران بابل شهرک صنعتی منصور کنده قطعه K5,K4</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">021 26804717 <span class="mx-1">|</span> 011 32073651-3</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-mobile-screen text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">0911 118 0970</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-fax text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">011 32072298</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-500"></i>
+                            <a href="mailto:Info@Bornatraffic.com" class="hover:text-brand-400 transition-colors">Info@Bornatraffic.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>تمامی حقوق برای <strong class="text-slate-300">گروه صنعتی برنا ترافیک</strong> محفوظ است. © 1403</p>
+                <p>طراحی و توسعه سایت توسط Borna AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic -->
+    <script>
+        // Telegram Form Submission Logic
+        function sendTelegramMessage(event) {
+            event.preventDefault(); // جلوگیری از رفرش شدن صفحه
+            
+            const name = document.getElementById('senderName').value.trim();
+            const phone = document.getElementById('senderPhone').value.trim();
+            const text = document.getElementById('senderMessage').value.trim();
+
+            if (!name || !phone || !text) {
+                alert("لطفاً تمامی فیلدها را پر کنید.");
+                return;
+            }
+
+            // ساختن پیام تمیز و مرتب
+            const message = `سلام، وقت بخیر.\nپیام جدید از سایت برنا ترافیک:\n\n👤 نام: ${name}\n📞 شماره تماس: ${phone}\n💬 متن پیام:\n${text}`;
+            
+            // کد کردن پیام برای URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // شماره تلگرام (همان شماره درخواستی)
+            const targetNumber = "+989128525355";
+            
+            // باز کردن تلگرام در صفحه جدید
+            window.open(`https://t.me/${targetNumber}?text=${encodedMessage}`, '_blank');
+        }
+
+        // Dark Mode Logic
+        function setupDarkMode() {
+            const toggle = document.getElementById('darkModeToggle');
+            const html = document.documentElement;
+            
+            if (!('theme' in localStorage)) {
+                localStorage.theme = 'dark';
+            }
+
+            if (localStorage.theme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            toggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                if (html.classList.contains('dark')) {
+                    localStorage.theme = 'dark';
+                } else {
+                    localStorage.theme = 'light';
+                }
+            });
+        }
+
+        // Mobile Menu Logic
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')) {
+                    icon.className = 'fa-solid fa-bars';
+                } else {
+                    icon.className = 'fa-solid fa-xmark';
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupDarkMode();
+            setupMobileMenu();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطالب و مقالات | برنا ترافیک</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'Tahoma', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            900: '#7c2d12',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        },
+                        telegram: {
+                            main: '#0088cc',
+                            hover: '#0077b3'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        .dark ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        body { font-family: 'Vazirmatn', sans-serif; }
+        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
+        .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 dark:bg-dark-bg dark:text-slate-200 transition-all duration-300 flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-dark-card/90 backdrop-blur-md shadow-md transition-colors duration-300 border-b border-slate-200 dark:border-dark-border">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-road text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl lg:text-2xl text-slate-900 dark:text-white tracking-tight group-hover:text-brand-500 transition-colors">برنا ترافیک</h1>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">تجهیزات شهری و جاده‌ای</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="hover:text-brand-500 transition-colors">صفحه اصلی</a>
+                    <a href="index.html#products-section" class="hover:text-brand-500 transition-colors">محصولات</a>
+                    <a href="projects.html" class="hover:text-brand-500 transition-colors">پروژه ها</a>
+                    <a href="articles.html" class="text-brand-500 font-bold border-b-2 border-brand-500 pb-1">مطالب</a>
+                    <a href="about.html" class="hover:text-brand-500 transition-colors">درباره ما</a>
+                    <a href="contact.html" class="hover:text-brand-500 transition-colors">تماس با ما</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-4">
+                    <button id="darkModeToggle" class="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="تغییر تم">
+                        <i class="fa-solid fa-moon text-slate-700 dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun text-yellow-400 hidden dark:inline-block text-lg"></i>
+                    </button>
+                    
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 dark:text-slate-300 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-dark-card border-t border-slate-100 dark:border-dark-border px-4 py-4 space-y-3 shadow-inner absolute w-full">
+            <a href="index.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">صفحه اصلی</a>
+            <a href="index.html#products-section" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">محصولات</a>
+            <a href="projects.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">پروژه ها</a>
+            <a href="articles.html" class="block px-4 py-2 text-brand-500 font-medium bg-brand-50 dark:bg-slate-800 rounded-lg">مطالب</a>
+            <a href="about.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">درباره ما</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">تماس با ما</a>
+        </div>
+    </header>
+
+    <!-- Page Header (Hero) -->
+    <section class="relative bg-slate-800 text-white overflow-hidden py-16 lg:py-20">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-4">وبلاگ و <span class="text-brand-500">مقالات آموزشی</span></h2>
+            <p class="text-lg text-slate-300 max-w-3xl mx-auto">جدیدترین مقالات تخصصی، آیین‌نامه‌ها، و راهنمای جامع خرید و نصب تجهیزات ترافیکی و شهری را در اینجا بخوانید و دانلود کنید.</p>
+        </div>
+    </section>
+
+    <!-- Main Blog Content -->
+    <main class="flex-grow container mx-auto px-4 py-12">
+        
+        <!-- Section Title & Search -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-8 bg-brand-500 rounded-full"></div>
+                <h3 class="text-2xl font-bold text-slate-800 dark:text-white">آخرین مطالب</h3>
+            </div>
+            
+            <div class="relative w-full md:w-72">
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <i class="fa-solid fa-search text-slate-400"></i>
+                </div>
+                <input type="text" placeholder="جستجو در مقالات..." class="w-full bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl py-2 pr-10 pl-4 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all shadow-sm">
+            </div>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Article 1 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/cone/400/300" alt="استوانه ایمنی" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-brand-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">راهنمای خرید</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 02 خرداد 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 1587 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">راهنمای کامل انتخاب و نصب استوانه‌ ایمنی (کله‌قندی) برای معابر شهری و پارکینگ‌ها</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">در شهرهای امروزی که حجم ترافیک و تردد خودروها روزبه‌روز افزایش می‌یابد، استفاده از تجهیزات ایمنی ساده و مؤثر مثل استوانه‌های ایمنی نقش مهمی در جداسازی مسیرها و جلوگیری از حوادث دارد...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/book/400/300" alt="دانلود کتابچه" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">دانلود ویژه</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 26 اردیبهشت 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 1969 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">دانلود کتابچه قوانین و استانداردهای نصب تجهیزات ترافیکی – راهنمای جامع</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">در دنیای صنعت و ترافیک، نصب صحیح تجهیزات اهمیت بسیار بالایی دارد؛ چرا که رعایت قوانین به‌طور مستقیم بر ایمنی جاده‌ها و کاهش تصادفات تأثیرگذار است. در این کتابچه تمام استانداردها را...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            دانلود فایل <i class="fa-solid fa-download text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/driving/400/300" alt="آیین نامه" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">دانلود PDF</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 23 اردیبهشت 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 6974 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">دانلود رایگان کتاب آیین‌نامه رانندگی + ۵۰ تست آزمون با پاسخ | PDF جدید</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">آیا در حال آماده‌سازی برای آزمون آیین‌نامه راهنمایی و رانندگی هستید؟ در این مطلب، می‌توانید نسخه کامل و بروز شده کتاب آیین نامه را به همراه نمونه سوالات پرتکرار دریافت کنید...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/traffic/400/300" alt="تجهیزات ترافیکی" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">مقالات تخصصی</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 22 اردیبهشت 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 2032 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">تجهیزات ترافیکی؛ راهنمای کامل، انواع و کاربردها</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">تجهیزات ترافیکی مجموعه‌ای از ابزارها و سازه‌هایی هستند که با هدف ارتقاء ایمنی، هدایت و نظم‌بخشی به تردد شهری و برون شهری تولید می‌شوند. شناخت دقیق این تجهیزات به مدیران شهری کمک می‌کند تا...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/safety/400/300" alt="ایمنی راه" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">مقالات تخصصی</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 20 اردیبهشت 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 1974 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">چرا انتخاب تجهیزات ترافیکی استاندارد برای ایمنی راه‌ها حیاتی است؟</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">در دنیای امروز، ایمنی در راه‌ها یکی از مهم‌ترین دغدغه‌های شهری و برون‌شهری به‌شمار می‌رود. تجهیزات ترافیکی استاندارد نقش کلیدی در کاهش تلفات جاده‌ای، دید بهتر در شب و دوام در برابر...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/signs/400/300" alt="تابلو ترافیکی" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-brand-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">راهنمای خرید</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 14 اردیبهشت 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 2081 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">راهنمای جامع تابلوهای ترافیکی: انواع، کاربردها و محل نصب</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">تابلوهای ترافیکی یکی از مهم‌ترین ابزارهای مدیریت ترافیک و ایمنی جاده‌ای هستند که با هدف هدایت، هشدار، اطلاع‌رسانی و الزام رانندگان نصب می‌شوند. این راهنما به شما کمک می‌کند تا...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 7 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/driving2/400/300" alt="تابلو راهنمایی" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">مقالات تخصصی</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 10 اردیبهشت 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 2127 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">تابلوهای راهنمایی و رانندگی و دسته‌بندی آن‌ها</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">تابلوهای راهنمایی و رانندگی، ابزارهای حیاتی در کنترل ترافیک جاده‌ای هستند که نقش مهمی در ایمنی معابر شهری ایفا می‌کنند. این تابلوها با استفاده از رنگ‌ها و اَشکال هندسی خاص کدهای جهانی دارند...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 8 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/street/400/300" alt="تابلو معابر" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-brand-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">راهنمای خرید</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 02 اردیبهشت 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 1852 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">انواع تابلوهای ترافیکی معابر | آشنایی کامل با کاربردها</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">تابلوهای ترافیکی معابر (مانند تابلو نام خیابان، کوچه و میدان) یکی از اصلی‌ترین ابزارهای هدایت شهری هستند که علاوه بر زیباسازی، باعث مسیریابی آسان شهروندان و خودروهای امدادی می‌شوند...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 9 -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/bridge2/400/300" alt="پل عابر" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">مبلمان شهری</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 02 اردیبهشت 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 2177 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">پل‌های عابر پیاده مکانیزه؛ گامی به سوی شهری ایمن‌تر</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">در دنیای امروز که ترافیک شهری به یکی از معضلات کلان‌شهرها تبدیل شده، توجه به ایمنی عابران پیاده اهمیت یافته است. پل‌های عابر پیاده مکانیزه و سازه‌های مستحکم فلزی راهکاری نوین برای...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 10 (Generated Extra) -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/speedbump/400/300" alt="سرعتگیر" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-brand-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">راهنمای خرید</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 28 فروردین 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 1430 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">راهنمای خرید و نصب سرعتگیرهای پلاستیکی و لاستیکی</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">سرعتگیرها نقش بسزایی در کنترل سرعت وسایل نقلیه در مناطق مسکونی، مدارس و پارکینگ‌ها دارند. تفاوت میان جنس لاستیکی و پلاستیکی، مقاومت نوری و نحوه اصولی پیچ کردن آن‌ها به زمین را در اینجا بخوانید...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 11 (Generated Extra) -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/solar/400/300" alt="چراغ خورشیدی" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">مقالات تخصصی</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 20 فروردین 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 3210 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">اهمیت استفاده از چراغ‌های چشمک‌زن خورشیدی در تقاطع‌ها</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">تجهیزات سولار (خورشیدی) بدون نیاز به کابل‌کشی و برق شهری، یکی از بهترین ابزارهای هشدار دهنده در جاده‌های تاریک و دورافتاده هستند. در این مقاله به بررسی پنل‌ها و باتری‌های این چراغ‌ها پرداخته‌ایم...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 12 (Generated Extra) -->
+            <article class="bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-slate-200 dark:border-dark-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                    <img src="https://picsum.photos/seed/parking/400/300" alt="تجهیزات پارکینگ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">مبلمان شهری</div>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 05 فروردین 1404</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-eye"></i> 2450 بازدید</span>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 dark:text-white mb-2 line-clamp-2 leading-tight group-hover:text-brand-500 transition-colors"><a href="#">راهنمای جامع تجهیزات پارکینگی؛ از استاپر تا محافظ ستون</a></h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">مدیریت صحیح فضای پارکینگ‌های مجتمع‌های مسکونی و تجاری نیازمند استفاده از متوقف‌کننده‌های خودرو (استاپر)، محافظ ستون لاستیکی و آینه‌های محدب ترافیکی است. این مقاله اطلاعات کاملی ارائه می‌دهد...</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <a href="#" class="text-brand-500 hover:text-brand-600 font-bold text-sm flex items-center gap-2 transition-colors">
+                            ادامه مطلب <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center items-center gap-2 mt-12 pb-8">
+            <button class="w-10 h-10 flex items-center justify-center rounded-xl font-bold bg-slate-100 text-slate-400 cursor-not-allowed dark:bg-slate-800 dark:text-slate-600 transition-colors" disabled><i class="fa-solid fa-angle-right"></i></button>
+            <button class="w-10 h-10 flex items-center justify-center rounded-xl font-bold transition-all shadow-sm border bg-brand-500 text-white border-brand-500 scale-110">1</button>
+            <button class="w-10 h-10 flex items-center justify-center rounded-xl font-bold transition-all shadow-sm border bg-white text-slate-700 border-slate-200 hover:bg-slate-50 dark:bg-dark-card dark:text-slate-300 dark:border-dark-border dark:hover:bg-slate-700">2</button>
+            <button class="w-10 h-10 flex items-center justify-center rounded-xl font-bold transition-all shadow-sm border bg-white text-slate-700 border-slate-200 hover:bg-slate-50 dark:bg-dark-card dark:text-slate-300 dark:border-dark-border dark:hover:bg-slate-700">3</button>
+            <span class="w-8 h-10 flex items-center justify-center text-slate-400 dark:text-slate-600 font-bold">...</span>
+            <button class="w-10 h-10 flex items-center justify-center rounded-xl font-bold transition-all shadow-sm border bg-white text-slate-700 border-slate-200 hover:bg-slate-50 dark:bg-dark-card dark:text-slate-300 dark:border-dark-border dark:hover:bg-slate-700"><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-4 border-brand-500 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <div>
+                    <h4 class="text-white text-xl font-bold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-industry text-brand-500"></i> برنا ترافیک
+                    </h4>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-400">
+                        مجموعه صنعتی برنا ترافیک با سال‌ها تجربه در تولید محصولات شهری، جاده‌ای و الکترونیک، آماده خدمت‌رسانی و اجرای پروژه‌های بزرگ در سراسر کشور می‌باشد.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://api.whatsapp.com/send?phone=+989351180970" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                        <a href="https://t.me/bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0088cc] hover:text-white transition-colors"><i class="fa-brands fa-telegram text-lg"></i></a>
+                        <a href="https://www.instagram.com/bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#E1306C] hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://facebook.com/Bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">محصولات ما</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تابلوهای معرفی معابر، اماکن، تزئینی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تجهیزات ترافیکی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پل های عابر پیاده</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مبلمان شهری (نیمکت، سطل)</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> وسایل پارکی، بازی فلزی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پایه چراغ ها و روشنایی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مجموعه پلی اتیلن بازی کودکان</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پرچم و پایه پرچم</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">دسترسی سریع</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> صفحه اصلی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> محصولات</a></li>
+                        <li><a href="projects.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پروژه ها</a></li>
+                        <li><a href="articles.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مطالب</a></li>
+                        <li><a href="about.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> درباره ما</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">ارتباط با ما</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-500"></i>
+                            <div>
+                                <strong class="block text-white mb-1">دفتر مرکزی:</strong>
+                                <span>تهران - زعفرانیه - اردیبهشت مرکزی - پلاک 10</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-industry mt-1 text-brand-500"></i>
+                            <div>
+                                <strong class="block text-white mb-1">کارخانه و فروش:</strong>
+                                <span>مازندران بابل شهرک صنعتی منصور کنده قطعه K5,K4</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">021 26804717 <span class="mx-1">|</span> 011 32073651-3</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-mobile-screen text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">0911 118 0970</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-fax text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">011 32072298</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-500"></i>
+                            <a href="mailto:Info@Bornatraffic.com" class="hover:text-brand-400 transition-colors">Info@Bornatraffic.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>تمامی حقوق برای <strong class="text-slate-300">گروه صنعتی برنا ترافیک</strong> محفوظ است. © 1403</p>
+                <p>طراحی و توسعه سایت توسط Borna AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic for Mobile menu and Dark Mode -->
+    <script>
+        // Dark Mode Logic
+        function setupDarkMode() {
+            const toggle = document.getElementById('darkModeToggle');
+            const html = document.documentElement;
+            
+            if (!('theme' in localStorage)) {
+                localStorage.theme = 'dark';
+            }
+
+            if (localStorage.theme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            toggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                if (html.classList.contains('dark')) {
+                    localStorage.theme = 'dark';
+                } else {
+                    localStorage.theme = 'light';
+                }
+            });
+        }
+
+        // Mobile Menu Logic
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')) {
+                    icon.className = 'fa-solid fa-bars';
+                } else {
+                    icon.className = 'fa-solid fa-xmark';
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupDarkMode();
+            setupMobileMenu();
+        });
+    </script>
+</body>
+</html>

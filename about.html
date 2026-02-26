@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما | برنا ترافیک</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'Tahoma', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            900: '#7c2d12',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        },
+                        telegram: {
+                            main: '#0088cc',
+                            hover: '#0077b3'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        .dark ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        body { font-family: 'Vazirmatn', sans-serif; }
+        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 dark:bg-dark-bg dark:text-slate-200 transition-all duration-300 flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-dark-card/90 backdrop-blur-md shadow-md transition-colors duration-300 border-b border-slate-200 dark:border-dark-border">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-road text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl lg:text-2xl text-slate-900 dark:text-white tracking-tight group-hover:text-brand-500 transition-colors">برنا ترافیک</h1>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">تجهیزات شهری و جاده‌ای</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="hover:text-brand-500 transition-colors">صفحه اصلی</a>
+                    <a href="index.html#products-section" class="hover:text-brand-500 transition-colors">محصولات</a>
+                    <a href="projects.html" class="hover:text-brand-500 transition-colors">پروژه ها</a>
+                    <a href="articles.html" class="hover:text-brand-500 transition-colors">مطالب</a>
+                    <a href="about.html" class="text-brand-500 font-bold border-b-2 border-brand-500 pb-1">درباره ما</a>
+                    <a href="contact.html" class="hover:text-brand-500 transition-colors">تماس با ما</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-4">
+                    <button id="darkModeToggle" class="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="تغییر تم">
+                        <i class="fa-solid fa-moon text-slate-700 dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun text-yellow-400 hidden dark:inline-block text-lg"></i>
+                    </button>
+                    
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 dark:text-slate-300 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-dark-card border-t border-slate-100 dark:border-dark-border px-4 py-4 space-y-3 shadow-inner absolute w-full">
+            <a href="index.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">صفحه اصلی</a>
+            <a href="index.html#products-section" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">محصولات</a>
+            <a href="projects.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">پروژه ها</a>
+            <a href="articles.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">مطالب</a>
+            <a href="about.html" class="block px-4 py-2 text-brand-500 font-medium bg-brand-50 dark:bg-slate-800 rounded-lg">درباره ما</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">تماس با ما</a>
+        </div>
+    </header>
+
+    <!-- Page Header (Hero) -->
+    <section class="relative bg-slate-900 text-white overflow-hidden py-20 lg:py-28">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
+        <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-2/3">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-500/20 text-brand-400 font-semibold mb-4 border border-brand-500/30">درباره شرکت برنا ترافیک</span>
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">همواره نزد ما اولویت<br><span class="text-brand-500">اهداف با مشتری‌ست</span></h2>
+                <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl">
+                    بیش از <strong class="text-white">۱۹ سال</strong> تجربه درخشان در طراحی، تولید و نصب تجهیزات ترافیکی، مبلمان شهری و سازه‌های عظیم فلزی در سراسر ایران.
+                </p>
+            </div>
+            <div class="md:w-1/3 hidden md:flex justify-end">
+                <div class="w-48 h-48 bg-brand-500 rounded-full flex items-center justify-center opacity-80 blur-3xl absolute -right-10 top-10"></div>
+                <i class="fa-solid fa-city text-9xl text-slate-700/50 drop-shadow-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section class="py-16 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                    <div class="absolute inset-0 bg-brand-500 mix-blend-multiply opacity-20 group-hover:opacity-0 transition-opacity duration-500"></div>
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="کارگاه برنا ترافیک" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-3">
+                        <div class="w-2 h-8 bg-brand-500 rounded-full"></div>
+                        معرفی مجموعه برنا
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-6 text-justify text-lg">
+                        شرکت <strong class="text-brand-600 dark:text-brand-400">برنا ترافیک</strong> با در اختیار داشتن مجوز تاسیس از وزارت صنایع و معادن و بهره‌مندی از نیروهای متخصص، با تجربه و کارآمد، یکی از پیشگامان صنعت ترافیک و زیباسازی شهری در کشور است.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-8 text-justify">
+                        کارگاه‌های مجهز ما به صورت تخصصی در زمینه ساخت انواع تجهیزات ترافیکی، زیباسازی شهری و سازه‌های فلزی (از جمله پل‌های عابر پیاده ساده و مکانیزه) فعالیت می‌کنند. ما با تکیه بر <strong class="text-slate-800 dark:text-white">تجربه ۱۹ سال همکاری</strong> مستمر با ادارات راه و ترابری و شهرداری‌های سراسر کشور، آمادگی کامل خود را جهت اجرای پروژه‌های کلان و شرکت در مناقصات اعلام می‌داریم.
+                    </p>
+                    
+                    <!-- Features -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-slate-800 flex items-center justify-center text-brand-500 shrink-0">
+                                <i class="fa-solid fa-certificate text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-white mb-1">مجوز رسمی</h4>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">دارای تاییدیه از وزارت صنایع و معادن کشور</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-slate-800 flex items-center justify-center text-brand-500 shrink-0">
+                                <i class="fa-solid fa-users-viewfinder text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-white mb-1">دعوت از کارشناسان</h4>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">آمادگی کامل جهت بازدید کارشناسان فنی از خط تولید</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume / Clients Section -->
+    <section class="py-16 bg-slate-50 dark:bg-dark-card border-t border-slate-200 dark:border-dark-border">
+        <div class="container mx-auto px-4">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 font-bold mb-2 block tracking-wider">افتخارات ما</span>
+                <h3 class="text-3xl md:text-4xl font-black text-slate-800 dark:text-white mb-6">رزومه کاری و مشتریان وفادار</h3>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                    در طی دو دهه فعالیت، افتخار همکاری با صدها شهرداری، سازمان دولتی و ارگان‌های خصوصی در سراسر پهناور ایران را داشته‌ایم. گوشه‌ای از این همکاری‌ها به تفکیک استان‌ها در زیر آورده شده است:
+                </p>
+            </div>
+
+            <!-- Provinces Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- مازندران (بزرگترین) -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-3">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-map-location-dot text-2xl text-brand-500"></i>
+                        <h4 class="text-xl font-bold text-slate-800 dark:text-white">استان مازندران (قطب فعالیت)</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">شهرداری بابل</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">شهرداری آمل</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">شهرداری بابلسر</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">امیر کلا</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">زرگر شهر</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">مرزیکلا</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">نکا</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">محمود آباد</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">چمستان</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">قائمشهر</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">فریدونکنار</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">کلاردشت</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">پل سفید</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">گلوگاه</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">کیاکلا</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">سرخرود</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">رویان</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">ایزدشهر</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">رامسر</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">نور و نوشهر</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">جویبار</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">اداره کل پست مازندران</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">سازمان پارک‌ها و پسماند آمل</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm">شهرک‌های دریاکنار، پردیس</span>
+                        <span class="bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-brand-600 dark:text-brand-400 font-bold px-3 py-1.5 rounded-lg text-sm">و ده‌ها نهاد دیگر...</span>
+                    </div>
+                </div>
+
+                <!-- تهران -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                        <h4 class="text-lg font-bold text-slate-800 dark:text-white">استان تهران</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">شهرداری منطقه 1</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">شهرداری منطقه 15</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">اندیشه</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">اسلامشهر</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">گلستان</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">دانشگاه آزاد فیروزکوه</span>
+                    </div>
+                </div>
+
+                <!-- البرز (کرج) -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                        <h4 class="text-lg font-bold text-slate-800 dark:text-white">استان البرز (کرج)</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">شهرداری کرج مرکزی</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">شهرداری منطقه 7</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">شهرداری منطقه 10</span>
+                    </div>
+                </div>
+
+                <!-- قم -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                        <h4 class="text-lg font-bold text-slate-800 dark:text-white">استان قم</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">شهرداری مرکز</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">مناطق 1، 2، 3 و 4</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">سازمان ترافیک قم</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">سازمان زیباسازی قم</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">دستجرد</span>
+                    </div>
+                </div>
+
+                <!-- خراسان -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                        <h4 class="text-lg font-bold text-slate-800 dark:text-white">استان‌های خراسان</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">نیشابور</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">فاروج</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">بشرویه</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">فردوس</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">شهرک صنعتی خراسان شمالی</span>
+                    </div>
+                </div>
+
+                <!-- آذربایجان -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                        <h4 class="text-lg font-bold text-slate-800 dark:text-white">استان‌های آذربایجان</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">منطقه 6 تبریز</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">مراغه</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">هشترود</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">هادی شهر</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">ترکمنچای</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">سراب و مرند</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">جلفا</span>
+                    </div>
+                </div>
+
+                <!-- گیلان و گلستان -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                        <h4 class="text-lg font-bold text-slate-800 dark:text-white">گیلان و گلستان</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">فومن</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">رستم آباد و لوشان</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">سنگر و کوچصفهان</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">راه و ترابری گلستان</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">گنبد و آزادشهر</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">جلین و تاتار</span>
+                    </div>
+                </div>
+
+                <!-- قزوین و سمنان -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                        <h4 class="text-lg font-bold text-slate-800 dark:text-white">قزوین و سمنان</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">قزوین و الوند</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">ارداق و خرمدشت</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">سازمان ترافیک بوئین زهرا</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">دامغان و شاهرود</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">دیباج و امیریه</span>
+                    </div>
+                </div>
+
+                <!-- سایر استان‌ها -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                        <h4 class="text-lg font-bold text-slate-800 dark:text-white">سایر استان‌های کشور</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">فارس (مرودشت، فراشبند...)</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">لرستان (خرم‌آباد، الشتر...)</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">خوزستان (ماهشهر، رامشیر)</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">زنجان (قیدار، کرسف)</span>
+                        <span class="bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 px-2 py-1 rounded text-sm">ایلام (راه و ترابری)</span>
+                        <span class="bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700 text-brand-700 dark:text-brand-300 px-2 py-1 rounded text-sm font-bold">و دهیاری‌های سراسر کشور</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="bg-brand-500 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">پروژه بعدی، شهر شماست!</h3>
+            <p class="mb-8 opacity-90 text-lg">برای استعلام شرایط همکاری، مناقصات و دریافت کاتالوگ جامع با ما تماس بگیرید.</p>
+            <a href="contact.html" class="inline-block bg-white text-brand-600 font-bold px-8 py-4 rounded-xl hover:bg-slate-100 hover:shadow-xl transition-all transform hover:-translate-y-1">
+                <i class="fa-solid fa-handshake ml-2"></i> ارتباط با واحد فروش و قراردادها
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-4 border-slate-800 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <div>
+                    <h4 class="text-white text-xl font-bold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-industry text-brand-500"></i> برنا ترافیک
+                    </h4>
+                    <p class="text-sm leading-relaxed mb-6 text-slate-400">
+                        مجموعه صنعتی برنا ترافیک با سال‌ها تجربه در تولید محصولات شهری، جاده‌ای و الکترونیک، آماده خدمت‌رسانی و اجرای پروژه‌های بزرگ در سراسر کشور می‌باشد.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://api.whatsapp.com/send?phone=+989351180970" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                        <a href="https://t.me/bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#0088cc] hover:text-white transition-colors"><i class="fa-brands fa-telegram text-lg"></i></a>
+                        <a href="https://www.instagram.com/bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#E1306C] hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://facebook.com/Bornatraffic" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">محصولات ما</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تابلوهای معرفی معابر، اماکن، تزئینی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> تجهیزات ترافیکی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پل های عابر پیاده</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مبلمان شهری (نیمکت، سطل)</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> وسایل پارکی، بازی فلزی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پایه چراغ ها و روشنایی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مجموعه پلی اتیلن بازی کودکان</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پرچم و پایه پرچم</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">دسترسی سریع</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> صفحه اصلی</a></li>
+                        <li><a href="index.html#products-section" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> محصولات</a></li>
+                        <li><a href="projects.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> پروژه ها</a></li>
+                        <li><a href="articles.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> مطالب</a></li>
+                        <li><a href="about.html" class="hover:text-brand-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> درباره ما</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">ارتباط با ما</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-500"></i>
+                            <div>
+                                <strong class="block text-white mb-1">دفتر مرکزی:</strong>
+                                <span>تهران - زعفرانیه - اردیبهشت مرکزی - پلاک 10</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-industry mt-1 text-brand-500"></i>
+                            <div>
+                                <strong class="block text-white mb-1">کارخانه و فروش:</strong>
+                                <span>مازندران بابل شهرک صنعتی منصور کنده قطعه K5,K4</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">021 26804717 <span class="mx-1">|</span> 011 32073651-3</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-mobile-screen text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">0911 118 0970</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-fax text-brand-500"></i>
+                            <span dir="ltr" class="text-right w-full">011 32072298</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-500"></i>
+                            <a href="mailto:Info@Bornatraffic.com" class="hover:text-brand-400 transition-colors">Info@Bornatraffic.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>تمامی حقوق برای <strong class="text-slate-300">گروه صنعتی برنا ترافیک</strong> محفوظ است. © 1403</p>
+                <p>طراحی و توسعه سایت توسط Borna AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic for Mobile menu and Dark Mode -->
+    <script>
+        function setupDarkMode() {
+            const toggle = document.getElementById('darkModeToggle');
+            const html = document.documentElement;
+            
+            if (!('theme' in localStorage)) {
+                localStorage.theme = 'dark';
+            }
+
+            if (localStorage.theme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            toggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                if (html.classList.contains('dark')) {
+                    localStorage.theme = 'dark';
+                } else {
+                    localStorage.theme = 'light';
+                }
+            });
+        }
+
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')) {
+                    icon.className = 'fa-solid fa-bars';
+                } else {
+                    icon.className = 'fa-solid fa-xmark';
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupDarkMode();
+            setupMobileMenu();
+        });
+    </script>
+</body>
+</html>
